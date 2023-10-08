@@ -1,0 +1,28 @@
+.link_btn {
+  --tamanho-borda: 5rem;
+  --altura-pesquisa: 3rem;
+  --espacamento-pesquisa: 0 1.5rem;
+
+  color: var(--preto);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: var(--espacamento-pesquisa);
+  font-weight: bolder;
+  font-size: 1.5rem;
+  border-radius: var(--tamanho-borda);
+  min-height: var(--altura-pesquisa);
+  width: 7.5em;
+}
+
+.cadastro {
+  background-color: var(--cor-secundaria);
+}
+
+.cadastro:focus,
+.cadastro:hover {
+  background-color: var(--cor-primaria);
+  color: #fff;
+}

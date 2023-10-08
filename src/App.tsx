@@ -1,35 +1,32 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { useState } from "react";
+import NavBar from "./components/layout/NavBar";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import Cadastro from "./components/pages/Cadastro";
 
-function App() {
-  const [count, setCount] = useState(0)
+export function App() {
+  const [count, setCount] = useState(0);
 
   return (
     <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
+      <Router>
+        <NavBar />
+        <p>{count}</p>
+        <h1>QUICKMOTORS</h1>
         <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ad expedita,
+          ullam consequuntur aut consectetur reprehenderit, quas qui nisi
+          numquam neque animi tenetur nam similique ipsa autem atque suscipit
+          natus velit!
         </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+        <button onClick={() => setCount(count + 1)}>me aperta rs</button>
+
+        <Routes>
+          <Route path="/" element={<Cadastro />} />
+          <Route path="/cadastro" element={<Cadastro />} />
+        </Routes>
+      </Router>
     </>
-  )
+  );
 }
 
-export default App
+export default App;

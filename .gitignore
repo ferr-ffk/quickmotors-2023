@@ -7,6 +7,7 @@ yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
 
+# Libraries
 node_modules
 dist
 dist-ssr
@@ -23,6 +24,7 @@ dist-ssr
 *.sln
 *.sw?
 
+# Config files
 tsconfig.json
 tsconfig.node.json
 vite.config.ts
