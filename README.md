@@ -1,7 +1,5 @@
 # QuickMotors
 
----
-
 _Orientador: Prof. Dr. Renato Fernandez_
 
 ## Introdução
