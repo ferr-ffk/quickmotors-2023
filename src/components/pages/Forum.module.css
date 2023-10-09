@@ -1,0 +1,11 @@
+.forum {
+  border-left: 1px solid var(--cinza);
+  border-right: 1px solid var(--cinza);
+  border-bottom: 1px solid var(--cinza);
+
+  height: 70rem;
+  max-height: 100%;
+  width: 60%;
+  position: absolute;
+  left: 7.5rem;
+}
