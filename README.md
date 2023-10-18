@@ -1,6 +1,4 @@
-QuickMotors
-
-===
+# QuickMotors
 
 _Orientador: Prof. Dr. Renato Fernandez_
 
