@@ -10,12 +10,12 @@ import { Link } from "react-router-dom";
 export function NavBar() {
   return (
     <nav className={style.nav_bar}>
-      <div className={style.menu}>
-        <AiOutlineMenu />
+      <div className={style.menu_esquerda}>
+        <div className={style.menu}>
+          <AiOutlineMenu />
+        </div>
+        <Pesquisa />
       </div>
-
-      <Pesquisa />
-
       <div className={style.links}>
         <LinkButton texto="Cadastrar" classCSS="cadastro" para="/cadastro" />
         <LinkButton texto="Login" classCSS="login" para="/login" />

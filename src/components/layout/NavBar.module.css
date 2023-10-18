@@ -4,8 +4,11 @@
   right: 0;
 
   display: flex;
-  justify-content: left;
+  justify-content: space-between;
   align-items: center;
+
+  width: 100%;
+  flex-grow: 3;
 
   padding: 1em 0;
   background-color: var(--cor-fundo);
@@ -23,6 +26,15 @@
   align-items: center;
 }
 
+.menu_esquerda {
+  display: flex;
+  flex-direction: row;
+
+  flex-grow: 2;
+  align-items: center;
+  justify-content: start;
+}
+
 .links {
   display: flex;
   flex-direction: row;
@@ -35,5 +47,5 @@ img {
 }
 
 a:has(img) {
-  height: 60px;
+  height: 5rem;
 }

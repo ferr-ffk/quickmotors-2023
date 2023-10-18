@@ -1,9 +1,9 @@
 import NavBar from "./components/layout/NavBar";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import Cadastro from "./components/pages/Cadastro";
+import Cadastro from "./components/paginas/Cadastro";
 import Container from "./components/layout/Container";
 import Footer from "./components/layout/Footer";
-import Forum from "./components/pages/Forum";
+import Forum from "./components/forum/Forum";
 
 export function App() {
   return (

@@ -15,7 +15,7 @@
 }
 
 .pesquisa {
-  width: 30%;
+  width: 60%;
   border-top-left-radius: var(--tamanho-borda);
   border-bottom-left-radius: var(--tamanho-borda);
 }
@@ -31,4 +31,6 @@
   min-width: 1rem;
   border-top-right-radius: var(--tamanho-borda);
   border-bottom-right-radius: var(--tamanho-borda);
+
+  --espacamento-pesquisa: 0 1rem 0 0;
 }

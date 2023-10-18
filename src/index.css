@@ -5,6 +5,9 @@
   line-height: 1.5;
   font-weight: 400;
 
+  --fonte-titulo: "Open Sans";
+  --fonte-destaque: "Roboto";
+
   color-scheme: light dark;
 
   --cor-primaria: #098ac1;
