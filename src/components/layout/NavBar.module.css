@@ -1,4 +1,8 @@
 .nav_bar {
+  --tamanho-navbar: 4.5rem;
+
+  height: var(--tamanho-navbar);
+
   position: sticky;
   left: 0;
   right: 0;
@@ -8,7 +12,6 @@
   align-items: center;
 
   width: 100%;
-  flex-grow: 3;
 
   padding: 1em 0;
   background-color: var(--cor-fundo);
@@ -41,11 +44,6 @@
   margin: 0 1.5rem;
 }
 
-img {
-  max-width: 100%;
-  max-height: 100%;
-}
-
 a:has(img) {
-  height: 5rem;
+  height: var(--tamanho-navbar);
 }

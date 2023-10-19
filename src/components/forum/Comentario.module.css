@@ -6,7 +6,7 @@
   padding: 1rem 2.5rem;
   min-height: 12.5rem;
 
-  border-bottom: 1px solid var(--cinza);
+  border-bottom: 1px solid var(--cor-borda);
 }
 
 .comentario h3 {

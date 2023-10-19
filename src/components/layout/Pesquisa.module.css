@@ -6,8 +6,8 @@
 
   font-size: 1.2rem;
   font-weight: bolder;
-  background-color: var(--cor-fundo-escura);
-  color: var(--cinza-escuro);
+  background-color: var(--cor-fundo-escuro);
+  color: #000;
 
   padding: var(--espacamento-pesquisa);
   height: var(--altura-pesquisa);
@@ -16,8 +16,14 @@
 
 .pesquisa {
   width: 60%;
+
   border-top-left-radius: var(--tamanho-borda);
   border-bottom-left-radius: var(--tamanho-borda);
+}
+
+::placeholder {
+  color: #0000009a;
+  opacity: 1;
 }
 
 .pesquisa:focus {
@@ -33,4 +39,20 @@
   border-bottom-right-radius: var(--tamanho-borda);
 
   --espacamento-pesquisa: 0 1rem 0 0;
+}
+
+@media (prefers-color-scheme: dark) {
+  .icone_pesquisa svg {
+    color: #0000009a;
+  }
+}
+
+.botao_pesquisar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background-color: transparent;
+  border: none;
+  aspect-ratio: 1;
 }

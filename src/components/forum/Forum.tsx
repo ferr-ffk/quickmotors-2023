@@ -9,7 +9,7 @@ function Forum() {
           nomeUsuario={"nando.lxz"}
           titulo={"Meu carro quebrou"}
           texto={"Ai que n sei o que n sei o que lá"}
-          tipo={"Carro"}
+          tipo={"Moto"}
           data={"Há 10 minutos"}
         />
         <Comentario

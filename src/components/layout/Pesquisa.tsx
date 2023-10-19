@@ -11,7 +11,9 @@ function Pesquisa() {
         placeholder="Pesquisar dúvidas frequentes"
       ></input>
       <div className={style.icone_pesquisa}>
-        <BsSearch />
+        <button className={style.botao_pesquisar}>
+          <BsSearch />
+        </button>
       </div>
     </>
   );
