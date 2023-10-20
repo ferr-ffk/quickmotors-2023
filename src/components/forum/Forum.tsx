@@ -5,7 +5,7 @@ function Forum() {
   return (
     <>
       <div className={style.forum}>
-        <Comentario
+        {/*<Comentario
           nomeUsuario={"nando.lxz"}
           titulo={"Meu carro quebrou"}
           texto={"Ai que n sei o que n sei o que lá"}
@@ -39,7 +39,7 @@ function Forum() {
           texto={"Ai que n sei o que n sei o que lá"}
           tipo={"Carro"}
           data={"Há 10 minutos"}
-        />
+        />*/}
       </div>
     </>
   );
