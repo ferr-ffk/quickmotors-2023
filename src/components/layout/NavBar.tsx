@@ -33,9 +33,7 @@ export function NavBar() {
               <li key={indice} className={item.className}>
                 <Link to={item.path}>
                   {item.icon}
-                  <span>
-                    <strong>{item.title}</strong>
-                  </span>
+                  <span>{item.title}</span>
                 </Link>
               </li>
             );

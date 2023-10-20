@@ -65,7 +65,7 @@ a:has(img) {
   height: 100dvh;
   width: 20rem;
 
-  font-size: 1.5rem;
+  font-size: 0.75rem;
 
   border-right: 1px solid var(--cor-borda);
 
@@ -99,7 +99,7 @@ a:has(img) {
 }
 
 .nav_menu h1 {
-  font-size: 2.25rem;
+  font-size: 1.75rem;
 
   margin: 1.25rem 0;
 }
@@ -147,7 +147,7 @@ a:has(img) {
   padding: 0 0.5rem;
   margin: 0.35rem 0;
 
-  font-size: 2rem;
+  font-size: 1.5rem;
 
   width: 100%;
   height: 100%;
