@@ -4,6 +4,7 @@ import Veiculo from "./Veiculo/Veiculo";
 interface RespostaComentario {
   usuario: Usuario;
   texto: string;
+  // ? funcionaria que nem upvote no reddit?
   avaliacao: number;
 }
 
@@ -12,7 +13,7 @@ export default interface Comentario {
   texto: string;
   descricao?: string;
   veiculo: Veiculo;
-  /* TODO: eu acho que tem que mudar esse ngc de avaliacao pra um objeto proprio */
+  // TODO: eu acho que tem que mudar esse ngc de avaliacao pra um objeto proprio
   avaliacao: number;
   respostas: RespostaComentario;
 }
