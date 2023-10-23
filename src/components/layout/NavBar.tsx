@@ -18,7 +18,7 @@ export function NavBar() {
 
   const MenuLateral = () => {
     return (
-      <aside
+      <nav
         className={
           sidebar ? style.nav_menu + " " + style.ativo : style.nav_menu
         }
@@ -39,7 +39,7 @@ export function NavBar() {
             );
           })}
         </ul>
-      </aside>
+      </nav>
     );
   };
 
@@ -54,8 +54,12 @@ export function NavBar() {
         <Pesquisa />
       </div>
       <div className={style.links}>
-        <LinkButton texto="Cadastrar" classCSS="cadastro" para="/cadastro" />
-        <LinkButton texto="Login" classCSS="login" para="/login" />
+        <LinkButton classCSS="cadastro" para="/cadastro">
+          Cadastrar
+        </LinkButton>
+        <LinkButton classCSS="login" para="/login">
+          Login
+        </LinkButton>
       </div>
 
       <Link to="/">

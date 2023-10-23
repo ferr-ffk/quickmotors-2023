@@ -1,5 +1,8 @@
+import LinkButton from "../layout/LinkButton";
 import Comentario from "./forum/Comentario";
 import style from "./forum/Forum.module.css";
+
+import * as Bi from "react-icons/bi";
 
 function Forum() {
   return (
@@ -69,6 +72,12 @@ function Forum() {
           veiculo={"Carro"}
         />
       </main>
+      <aside>
+        <LinkButton classCSS="duvida" para="/cadastro">
+          <Bi.BiSolidLock />
+          Realizar Dúvida
+        </LinkButton>
+      </aside>
     </>
   );
 }

@@ -1,16 +1,17 @@
 import { Link } from "react-router-dom";
 import style from "./LinkButton.module.css";
+import { ReactNode } from "react";
 
 interface Props {
-  texto: string;
+  children: ReactNode | ReactNode[];
   classCSS: string;
   para: string;
 }
 
-function LinkButton({ texto, classCSS, para }: Props) {
+function LinkButton({ children, classCSS, para }: Props) {
   return (
     <Link className={`${style.link_btn} ${style[classCSS]}`} to={para}>
-      {texto}
+      {children}
     </Link>
   );
 }
