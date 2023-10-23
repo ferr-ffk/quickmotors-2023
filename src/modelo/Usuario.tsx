@@ -6,4 +6,5 @@ export default interface Usuario {
   nomeUsuario: string;
   senha: string;
   veiculoUsado: Veiculo;
+  
 }
