@@ -1,5 +1,5 @@
 import Comentario from "./forum/Comentario";
-import style from "./Forum.module.css";
+import style from "./forum/Forum.module.css";
 
 function Forum() {
   return (

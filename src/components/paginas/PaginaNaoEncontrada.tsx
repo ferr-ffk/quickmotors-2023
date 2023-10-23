@@ -1,14 +1,15 @@
+import { Link } from "react-router-dom";
+import styles from "./PaginaNaoEncontrada.module.css";
+
 function PaginaNaoEncontrada() {
-    return (
-
-        <>
-
-            <h1>Página não encontrada...</h1>
-            <p><a href="/">Voltar para a página principal</a></p>
-
-        </>
-
-    );
+  return (
+    <section className={styles.container_nao_encontrada}>
+      <h1>Página não encontrada...</h1>
+      <p>
+        <Link to="/">Voltar para a página principal</Link>
+      </p>
+    </section>
+  );
 }
 
 export default PaginaNaoEncontrada;
