@@ -1,5 +1,4 @@
 import Usuario from "./Usuario";
-import Veiculo from "./Veiculo/Veiculo";
 
 interface RespostaComentario {
   usuario: Usuario;
@@ -8,12 +7,14 @@ interface RespostaComentario {
   avaliacao: number;
 }
 
-export default interface Comentario {
+export default interface IComentario {
   titulo: string;
   texto: string;
   descricao?: string;
-  veiculo: Veiculo;
+  usuario: string;
+  veiculo: "Carro" | "Moto" | "Outros";
+  data: string;
   // TODO: eu acho que tem que mudar esse ngc de avaliacao pra um objeto proprio
-  avaliacao: number;
-  respostas: RespostaComentario;
+  avaliacao?: number;
+  respostas?: RespostaComentario;
 }

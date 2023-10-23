@@ -4,43 +4,64 @@ import style from "./forum/Forum.module.css";
 function Forum() {
   return (
     <>
-      <div className={style.forum}>
+      <main className={style.forum}>
         <Comentario
-          nomeUsuario={"nando.lxz"}
+          usuario={"nando.lxz"}
           titulo={"Meu carro quebrou"}
           texto={"Ai que n sei o que n sei o que lá"}
-          tipo={"Moto"}
           data={"Há 10 minutos"}
+          veiculo={"Carro"}
         />
         <Comentario
-          nomeUsuario={"nando.lxz"}
+          usuario={"nando.lxz"}
           titulo={"Meu carro quebrou"}
           texto={"Ai que n sei o que n sei o que lá"}
-          tipo={"Carro"}
           data={"Há 10 minutos"}
+          veiculo={"Carro"}
         />
         <Comentario
-          nomeUsuario={"nando.lxz"}
+          usuario={"nando.lxz"}
           titulo={"Meu carro quebrou"}
           texto={"Ai que n sei o que n sei o que lá"}
-          tipo={"Carro"}
           data={"Há 10 minutos"}
+          veiculo={"Carro"}
         />
         <Comentario
-          nomeUsuario={"nando.lxz"}
+          usuario={"nando.lxz"}
           titulo={"Meu carro quebrou"}
           texto={"Ai que n sei o que n sei o que lá"}
-          tipo={"Carro"}
           data={"Há 10 minutos"}
+          veiculo={"Carro"}
         />
         <Comentario
-          nomeUsuario={"nando.lxz"}
+          usuario={"nando.lxz"}
           titulo={"Meu carro quebrou"}
           texto={"Ai que n sei o que n sei o que lá"}
-          tipo={"Carro"}
           data={"Há 10 minutos"}
+          veiculo={"Carro"}
         />
-      </div>
+        <Comentario
+          usuario={"nando.lxz"}
+          titulo={"Meu carro quebrou"}
+          texto={"Ai que n sei o que n sei o que lá"}
+          data={"Há 10 minutos"}
+          veiculo={"Carro"}
+        />
+        <Comentario
+          usuario={"nando.lxz"}
+          titulo={"Meu carro quebrou"}
+          texto={"Ai que n sei o que n sei o que lá"}
+          data={"Há 10 minutos"}
+          veiculo={"Carro"}
+        />
+        <Comentario
+          usuario={"nando.lxz"}
+          titulo={"Meu carro quebrou"}
+          texto={"Ai que n sei o que n sei o que lá"}
+          data={"Há 10 minutos"}
+          veiculo={"Carro"}
+        />
+      </main>
     </>
   );
 }
