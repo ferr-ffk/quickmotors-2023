@@ -6,7 +6,7 @@ import roteador from "./rotasUsuarios.js";
 const app = express();
 
 // iremos usar json para armazenar objetos
-app.use(express.json);
+app.use(express.json());
 app.use(cors());
 
 app.use("/usuario", roteador);
