@@ -1,7 +1,7 @@
-import styleUsuario from "./CadastroUsuario.module.css";
-import styleMecanico from "./CadastroMecanico.module.css";
+import styleUsuario from "./cadastro/CadastroUsuario.module.css";
+import styleMecanico from "./cadastro/CadastroMecanico.module.css";
 import useCadastroVisivel from "../../hook/UseCadastroVisivel";
-import FormCadastroUsuario from "./cadastro/FormCadastroUsuario";
+import FormCadastro from "./cadastro/FormCadastro";
 
 interface Props {
   tipoLogin: "usuario" | "mecanico";
@@ -31,7 +31,7 @@ function PaginaCadastro({ linkLogin, tipoLogin }: Props) {
       </a>
 
       {cadastroVisivel ? (
-        <FormCadastroUsuario />
+        <FormCadastro submit={() => console.log("não implementei pae")} />
       ) : (
         <p className={styleUsuario.paragrafo_login}>
           Já é usuário?{" "}

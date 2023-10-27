@@ -5,6 +5,7 @@ import PaginaCadastro from "./PaginaCadastro";
 function Cadastro() {
   const navigate = useNavigate();
 
+  // função para criar requisição POST de um usuário no sistema
   const createUsuario = (usuario: Usuario) => {
     fetch("http://localhost:8080/usuario", {
       method: "POST",
@@ -20,7 +21,7 @@ function Cadastro() {
       .catch((err) => console.log(err));
   };
 
-  return <PaginaCadastro tipoLogin="mecanico" linkLogin="login/usuario" />;
+  return <PaginaCadastro tipoLogin="usuario" linkLogin="login/usuario" />;
 }
 
 export default Cadastro;
