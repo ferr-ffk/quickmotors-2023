@@ -1,7 +1,7 @@
 .link_btn {
   --tamanho-borda: 5rem;
   --altura-pesquisa: 3rem;
-  --espacamento-pesquisa: 0 1.5rem;
+  --espacamento-pesquisa: 0 1.25rem;
 
   color: var(--preto);
 
@@ -32,5 +32,15 @@
   gap: 0.5rem;
 
   background-color: var(--cor-primaria);
+  color: white;
+
+  width: 15rem;
+  font-size: 1.5rem;
+  aspect-ratio: 31 / 9;
+}
+
+.duvida:hover,
+.duvida:focus {
+  background-color: var(--cor-erro);
   color: white;
 }

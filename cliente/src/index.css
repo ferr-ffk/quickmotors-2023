@@ -66,6 +66,8 @@ body,
 
 /* título da página */
 h1 {
+  position: relative;
+
   font-family: "Lato", sans-serif;
   font-weight: 800;
 }

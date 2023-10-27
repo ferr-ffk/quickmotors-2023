@@ -1,6 +1,6 @@
 .container {
   width: 100%;
-  min-height: 300dvh;
+  min-height: 100dvh;
   position: relative;
 }
 
@@ -19,7 +19,12 @@
 }
 
 .flex_column {
+  display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
+}
+
+.cadastro {
+  height: 100%;
 }
