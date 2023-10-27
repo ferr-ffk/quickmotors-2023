@@ -1,27 +1,19 @@
-import { useEffect, useState } from "react";
-import Usuario from "../modelo/Usuario";
+import { useState } from "react";
 
-function CriarUsuario() {
-  const [usuario, setUsuario] = useState<Usuario>({
-    nomeUsuario: "",
-    email: "",
-    img: "",
-    senha: "",
-  });
+export interface IUsuario {
+  nome: string;
+  email: string;
+}
 
-  const handleSubmit = (usuario: Usuario): void => {
-    useEffect(() => {
-      fetch("http://localhost:8080/usuario", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(usuario),
-      })
-        .then((resp) => resp.json())
-        .then((data) => setUsuario(data))
-        .catch((err) => console.log(err));
-    }, []);
+interface Props {
+  handleSubmit: (usuario: any) => void;
+}
+
+function CriarUsuario({ handleSubmit }: Props) {
+  const [usuario, setUsuario] = useState<IUsuario>({ nome: "", email: "" });
+
+  const handleChange = (event: any) => {
+    setUsuario({ ...usuario, [event.target.name]: event.target.value });
   };
 
   const submit = (event: any) => {
@@ -30,11 +22,20 @@ function CriarUsuario() {
   };
 
   return (
-    <form>
-      <input type="text" placeholder="Nome" />
-      <input type="text" placeholder="email" />
-      <input type="password" placeholder="senha" />
-      <button onClick={submit}>Enviar</button>
+    <form onSubmit={submit}>
+      <input
+        name="nome"
+        onChange={handleChange}
+        type="text"
+        placeholder="Nome"
+      />
+      <input
+        name="email"
+        onChange={handleChange}
+        type="text"
+        placeholder="email"
+      />
+      <button onClick={handleSubmit}>Enviar</button>
     </form>
   );
 }

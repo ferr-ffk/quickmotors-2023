@@ -9,7 +9,7 @@ const app = express();
 app.use(express.json());
 app.use(cors());
 
-app.use("/usuario", roteador);
+app.use("/cadastrar-usuario", roteador);
 
 // define a porta em que o backend irá hospedar
 app.listen(8080);

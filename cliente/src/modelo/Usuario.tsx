@@ -1,4 +1,4 @@
-import Veiculo from "./Veiculo/Veiculo";
+import Veiculo from "./Veiculo";
 
 export default interface Usuario {
   img: string;
