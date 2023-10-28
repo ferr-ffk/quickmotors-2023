@@ -20,6 +20,10 @@
 }
 
 @media (max-width: 767px) {
+  .nav_bar {
+    align-items: center;
+  }
+
   .links a {
     display: none;
   }
