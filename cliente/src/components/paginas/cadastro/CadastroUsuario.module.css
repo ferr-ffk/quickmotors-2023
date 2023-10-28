@@ -4,6 +4,14 @@
   align-items: center;
   justify-content: flex-start;
   gap: 2.5rem;
+
+  height: 100%;
+}
+
+@media (max-width: 767px) {
+  .container {
+    justify-content: center;
+  }
 }
 
 .paragrafo_login {

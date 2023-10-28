@@ -1,5 +1,5 @@
 .nav_bar {
-  --tamanho-navbar: 4.5rem;
+  --tamanho-navbar: 3.75rem;
 
   height: var(--tamanho-navbar);
 
@@ -14,9 +14,19 @@
 
   width: 100%;
 
-  padding: 1em 0;
+  padding: 0.75rem 0;
   background-color: var(--cor-fundo);
   border-bottom: 1px solid var(--cor-borda);
+}
+
+@media (max-width: 767px) {
+  .nav_bar {
+    align-items: center;
+  }
+
+  .links a {
+    display: none;
+  }
 }
 
 .menu {
@@ -54,7 +64,13 @@
 }
 
 a:has(img) {
-  height: var(--tamanho-navbar);
+  height: 100%;
+}
+
+a img {
+  height: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: contain;
 }
 
 .nav_menu {
