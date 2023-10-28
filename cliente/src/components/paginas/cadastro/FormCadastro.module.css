@@ -1,0 +1,39 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1.25rem;
+}
+
+.form div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+}
+
+.botao_enviar {
+  --margin-top: 1.5rem;
+
+  background-color: var(--cor-primaria);
+  color: white;
+
+  margin-top: var(--margin-top);
+
+  width: 16.5rem;
+  aspect-ratio: 34 / 9;
+
+  font-size: 1.75rem;
+  font-weight: 700;
+
+  border: none;
+  border-radius: 2rem;
+
+  transition: all 350ms;
+}
+
+.botao_enviar:hover,
+.botao_enviar:focus {
+  margin-top: calc(var(--margin-top) - 1rem);
+}

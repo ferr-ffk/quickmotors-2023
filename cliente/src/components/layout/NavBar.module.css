@@ -47,6 +47,10 @@
   color: var(--cinza);
 }
 
+.menu_barra svg {
+  color: #000 !important;
+}
+
 .links {
   display: flex;
   flex-direction: row;
@@ -117,7 +121,7 @@ a:has(img) {
 }
 
 .fechar_sidebar svg {
-  color: #000;
+  color: #000 !important;
 
   height: 100%;
   width: 100%;

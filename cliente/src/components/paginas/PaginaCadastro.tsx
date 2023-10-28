@@ -26,26 +26,31 @@ function PaginaCadastro({ linkLogin, tipoLogin }: Props) {
         QuickMotors
       </h1>
 
-      <a onClick={exibirCadastro} className={styleUsuario.link_cadastrar}>
-        Cadastrar com Email
-      </a>
-
       {cadastroVisivel ? (
         <FormCadastro submit={() => console.log("não implementei pae")} />
       ) : (
-        <p className={styleUsuario.paragrafo_login}>
-          Já é usuário?{" "}
+        <>
           <a
-            className={
-              isLoginUsuario
-                ? styleUsuario.link_login
-                : styleMecanico.link_login
-            }
-            href={linkLogin}
+            href="#"
+            onClick={exibirCadastro}
+            className={styleUsuario.link_cadastrar}
           >
-            Entre
+            Cadastrar com Email
           </a>
-        </p>
+          <p className={styleUsuario.paragrafo_login}>
+            Já é usuário?{" "}
+            <a
+              className={
+                isLoginUsuario
+                  ? styleUsuario.link_login
+                  : styleMecanico.link_login
+              }
+              href={linkLogin}
+            >
+              Entre
+            </a>
+          </p>
+        </>
       )}
     </div>
   );

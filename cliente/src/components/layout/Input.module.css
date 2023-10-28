@@ -1,0 +1,28 @@
+.input {
+  --cor-texto: white;
+
+  padding: 0.8rem;
+  border-radius: 0.45rem;
+  min-width: 25rem;
+  font-size: 1.25rem;
+  border: none;
+
+  color: var(--cor-texto);
+}
+
+.input.email,
+.input[type="password"] {
+  background-color: var(--cor-fundo-escuro);
+}
+
+.input.apelido {
+  background-color: var(--cinza);
+}
+
+.apelido::placeholder,
+.apelido::-webkit-input-placeholder {
+  color: white;
+
+  font-weight: 600;
+  opacity: 1;
+}

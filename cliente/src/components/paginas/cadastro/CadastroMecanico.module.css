@@ -20,3 +20,7 @@
   color: var(--cor-secundaria);
   text-decoration: underline;
 }
+
+.link_login:hover {
+  cursor: pointer !important;
+}

@@ -33,6 +33,10 @@
   color: var(--cor-primaria);
 }
 
+.link_login:hover {
+  cursor: pointer !important;
+}
+
 .link_cadastrar {
   color: #000;
   text-decoration: underline;
