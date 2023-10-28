@@ -72,7 +72,7 @@ function Forum() {
           veiculo={"Carro"}
         />
       </main>
-      <aside>
+      <aside className={style.aside}>
         <LinkButton classCSS="duvida" para="/cadastro">
           <Bi.BiSolidLock />
           Realizar Dúvida
