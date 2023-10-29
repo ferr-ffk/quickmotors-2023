@@ -1,0 +1,27 @@
+.resposta {
+  --padding-resposta: 0.725rem 1.25rem;
+  --borda-resposta: 1px solid var(--cinza);
+
+  border-radius: var(--borda-suave);
+
+  margin: 1.125rem 0;
+  border: var(--borda-resposta);
+}
+
+.avaliacao {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.25rem;
+
+  padding: var(--padding-resposta);
+  border-bottom: var(--borda-resposta);
+}
+
+.avaliacao h4 {
+  font-size: 1.125rem;
+}
+
+.informacoes_resposta {
+  padding: var(--padding-resposta);
+}

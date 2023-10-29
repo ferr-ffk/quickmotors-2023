@@ -27,7 +27,10 @@ function PaginaCadastro({ linkLogin, tipoLogin }: Props) {
       </h1>
 
       {cadastroVisivel ? (
-        <FormCadastro submit={() => console.log("não implementei pae")} />
+        <FormCadastro
+          submit={() => console.log("não implementei pae")}
+          tipo={tipoLogin}
+        />
       ) : (
         <>
           <a

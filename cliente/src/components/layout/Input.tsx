@@ -5,11 +5,13 @@ interface Props {
   tipo: string;
   placeholder: string;
   classeCSS?: string;
+  pattern?: string;
 }
 
-function Input({ id, placeholder, tipo, classeCSS }: Props) {
+function Input({ id, placeholder, tipo, classeCSS, pattern }: Props) {
   return (
     <input
+      pattern={pattern}
       id={id}
       className={`${style.input} ${style[classeCSS]}`}
       type={tipo}

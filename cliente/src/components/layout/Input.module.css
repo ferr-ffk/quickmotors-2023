@@ -11,7 +11,8 @@
 }
 
 .input.email,
-.input[type="password"] {
+.input[type="password"],
+.input.id_mecanico {
   background-color: var(--cor-fundo-escuro);
 }
 

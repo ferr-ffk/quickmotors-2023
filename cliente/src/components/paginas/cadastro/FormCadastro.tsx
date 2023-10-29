@@ -1,12 +1,14 @@
 import Input from "../../layout/Input";
+import RadioLabel from "../../layout/RadioLabel";
 import TextLabel from "../../layout/TextLabel";
 import style from "./FormCadastro.module.css";
 
 interface Props {
   submit: () => void;
+  tipo: "mecanico" | "usuario";
 }
 
-function FormCadastro({ submit }: Props) {
+function FormCadastro({ submit, tipo }: Props) {
   const handleSubmit = (event: any) => {
     event?.preventDefault();
   };
@@ -39,6 +41,24 @@ function FormCadastro({ submit }: Props) {
         <Input tipo="password" placeholder="" id="senha_confirmar" />
       </div>
 
+      {tipo === "mecanico" && (
+        <div>
+          {/* // TODO Validar o CPF ou o MEI */}
+          <RadioLabel
+            campos={["CPF", "MEI"]}
+            onChange={function (): void {
+              throw new Error("Não implementei ne pae.");
+            }}
+          />
+          <Input
+            classeCSS="id_mecanico"
+            id="id_mecanico"
+            tipo="text"
+            placeholder="Digite seu CPF"
+          />
+        </div>
+      )}
+
       <div>
         <TextLabel obrigatorio={false} htmlFor="apelido">
           Opcional: Escolha um apelido!
@@ -51,7 +71,12 @@ function FormCadastro({ submit }: Props) {
         />
       </div>
 
-      <button className={style.botao_enviar} onClick={handleSubmit}>
+      <button
+        className={
+          tipo === "usuario" ? style.enviar_usuario : style.enviar_mecanico
+        }
+        onClick={handleSubmit}
+      >
         Enviar
       </button>
     </form>

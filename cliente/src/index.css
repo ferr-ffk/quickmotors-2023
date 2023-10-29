@@ -1,6 +1,5 @@
 :root {
-  font-family: "Open Sans", Inter, system-ui, Avenir, Helvetica, Arial,
-    sans-serif;
+  font-family: "Open Sans", Inter, system-ui, Helvetica, Arial, sans-serif;
   font-size: 12px;
   line-height: 1.5;
   font-weight: 400;
@@ -24,6 +23,10 @@
   --cinza-escuro: #292f33;
 
   --cor-borda: var(--cinza);
+
+  --borda-suave: 0.525rem;
+  --borda-media: 1.125rem;
+  --borda-forte: 1.725rem;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -52,7 +55,7 @@
 *::after {
   padding: 0;
   margin: 0;
-  border-style: border-box;
+  box-sizing: border-box;
 }
 
 html,
