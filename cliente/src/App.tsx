@@ -7,7 +7,7 @@ import PaginaNaoEncontrada from "./components/paginas/PaginaNaoEncontrada";
 import { Navigate } from "../node_modules/react-router-dom/dist/index";
 import PaginaCriarUsuario from "./components/PaginaCriarUsuario";
 import CadastroUsuario from "./components/paginas/CadastroUsuario";
-import CadastroMecanico from "./components/paginas/cadastro/CadastroMecanico";
+import CadastroMecanico from "./components/paginas/CadastroMecanico";
 import PaginaComentario from "./components/paginas/comentario/PaginaComentario";
 
 export function App() {

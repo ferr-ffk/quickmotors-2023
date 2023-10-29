@@ -1,5 +1,5 @@
 import styles from "./Comentario.module.css";
-import IComentario from "../../../modelo/IComentario";
+import IComentario from "../../../modelo/Comentario";
 
 function Comentario({ usuario, titulo, texto, veiculo, data }: IComentario) {
   return (

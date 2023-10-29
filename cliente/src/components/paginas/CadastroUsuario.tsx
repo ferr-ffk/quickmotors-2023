@@ -6,7 +6,7 @@ function Cadastro() {
   const navigate = useNavigate();
 
   // função para criar requisição POST de um usuário no sistema
-  const createUsuario = (usuario: Usuario) => {
+  const handleSubmit = (usuario: Usuario) => {
     fetch("http://localhost:8080/usuario", {
       method: "POST",
       headers: {
@@ -21,7 +21,15 @@ function Cadastro() {
       .catch((err) => console.log(err));
   };
 
-  return <PaginaCadastro tipoLogin="usuario" linkLogin="login/usuario" />;
+  return (
+    <PaginaCadastro
+      tipoLogin="usuario"
+      linkLogin="login/usuario"
+      submit={function (): void {
+        throw new Error("Function not implemented.");
+      }}
+    />
+  );
 }
 
 export default Cadastro;

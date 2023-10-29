@@ -1,7 +1,7 @@
 import style from "./PaginaComentario.module.css";
 import RespostaComentario from "./RespostaComentario";
 
-function PaginaComentario() {
+export function PaginaComentario() {
   return (
     <main className={style.main}>
       <div className={style.comentario}>
@@ -29,7 +29,12 @@ function PaginaComentario() {
           <button className={style.botao_responder}>Responder</button>
         </div>
       </div>
-      <RespostaComentario />
+      <RespostaComentario
+        numero_estrelas={15}
+        nome_mecanico="Mecânico"
+        avaliacao_mecanico={10}
+        texto={"asdawdaawdad"}
+      />
     </main>
   );
 }

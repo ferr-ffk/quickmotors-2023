@@ -4,17 +4,23 @@ import logo from "../../../public/logo-quickmotors.png";
 
 import Pesquisa from "./Pesquisa";
 import LinkButton from "./LinkButton";
-import { Link } from "react-router-dom";
-import { FaBars } from "react-icons/fa";
+import { Link, useNavigate } from "react-router-dom";
+import * as Io5 from "react-icons/io5";
 import * as AiIcons from "react-icons/ai";
 import { useState } from "react";
 
 import { SidebarData } from "./SideBarData.tsx";
+import SelectCidades from "./SelectCidades.tsx";
 
 export function NavBar() {
   const [sidebar, setSidebar] = useState(false);
+  const navigate = useNavigate();
 
   const mostrarSidebar = () => setSidebar(!sidebar);
+
+  const handleSelect = (e: React.ChangeEvent<HTMLSelectElement>) => {
+    navigate(`/comentarios/${e?.currentTarget.value}`);
+  };
 
   const MenuLateral = () => {
     return (
@@ -48,10 +54,13 @@ export function NavBar() {
       <div className={style.menu_esquerda}>
         <div className={style.menu}>
           <Link to="#" className={style.menu_barra}>
-            <FaBars onClick={mostrarSidebar} />
+            <Io5.IoMenuOutline onClick={mostrarSidebar} />
           </Link>
         </div>
+
         <Pesquisa />
+
+        <SelectCidades onChange={handleSelect} />
       </div>
       <div className={style.links}>
         <LinkButton classCSS="cadastro" para="/cadastro">

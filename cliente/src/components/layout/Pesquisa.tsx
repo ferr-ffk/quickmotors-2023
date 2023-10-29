@@ -5,7 +5,7 @@ import { BsSearch } from "react-icons/bs";
 
 function Pesquisa() {
   // se a tela for menor que 480px tem conflito no placeholder
-  const isTelaMenorQue440 = window.matchMedia("(max-width: 440px)").matches;
+  const isTelaMenorQue440 = !window.matchMedia("(max-width: 767px)").matches;
 
   return (
     <>

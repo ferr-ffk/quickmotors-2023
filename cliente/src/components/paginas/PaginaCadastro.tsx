@@ -6,9 +6,10 @@ import FormCadastro from "./cadastro/FormCadastro";
 interface Props {
   tipoLogin: "usuario" | "mecanico";
   linkLogin: string;
+  submit: () => void;
 }
 
-function PaginaCadastro({ linkLogin, tipoLogin }: Props) {
+function PaginaCadastro({ linkLogin, tipoLogin, submit }: Props) {
   const { cadastroVisivel, exibirCadastro } = useCadastroVisivel();
 
   const isLoginUsuario = tipoLogin === "usuario";
@@ -27,10 +28,7 @@ function PaginaCadastro({ linkLogin, tipoLogin }: Props) {
       </h1>
 
       {cadastroVisivel ? (
-        <FormCadastro
-          submit={() => console.log("não implementei pae")}
-          tipo={tipoLogin}
-        />
+        <FormCadastro submit={submit} tipo={tipoLogin} />
       ) : (
         <>
           <a

@@ -1,24 +1,31 @@
 import style from "./RespostaComentario.module.css";
 
-function RespostaComentario() {
+interface Props {
+  numero_estrelas: number;
+  nome_mecanico: string;
+  avaliacao_mecanico: number;
+  texto: string;
+}
+
+function RespostaComentario({
+  avaliacao_mecanico,
+  nome_mecanico,
+  numero_estrelas,
+  texto,
+}: Props) {
   return (
     <div className={style.resposta}>
       <div className={style.avaliacao}>
         <h4>Resposta</h4>
         <p>
-          Avaliação: <span>pipipipopopo</span>
+          Avaliação: <span>{numero_estrelas}</span>
         </p>
       </div>
       <div className={style.informacoes_resposta}>
         <h3>
-          Mecânico &bull; <span>13 estrelas</span>
+          {nome_mecanico} &bull; <span>{avaliacao_mecanico} estrela(s)</span>
         </h3>
-        <p>
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ratione
-          necessitatibus aliquid repellendus soluta dolorem sequi minima
-          molestiae aspernatur. Exercitationem dolore iure provident suscipit
-          perspiciatis voluptas odit obcaecati iste rerum dicta!
-        </p>
+        <p>{texto}</p>
       </div>
     </div>
   );
