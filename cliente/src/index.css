@@ -9,6 +9,12 @@
   --fonte-titulo: "Open Sans";
   --fonte-destaque: "Roboto";
 
+  /* Tamanhos de fontes */
+  --fs-xl: 5rem;
+  --fs-600: 1.5rem;
+  --fs-500: 1.25rem;
+  --fs-400: 1rem;
+
   --cor-texto: #000;
 
   --cor-primaria: #098ac1;
@@ -65,6 +71,10 @@ body,
 
   background-color: var(--cor-fundo);
   color: var(--cor-texto);
+
+  font-size: var(--fs-400);
+
+  scroll-behavior: smooth;
 }
 
 /* título da página */
@@ -73,6 +83,8 @@ h1 {
 
   font-family: "Lato", sans-serif;
   font-weight: 800;
+
+  font-size: var(--fs-xl) !important;
 }
 
 /* subtítulo da página */

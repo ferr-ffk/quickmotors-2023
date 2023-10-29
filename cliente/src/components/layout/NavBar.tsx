@@ -11,6 +11,7 @@ import { useState } from "react";
 
 import { SidebarData } from "./SideBarData.tsx";
 import SelectCidades from "./SelectCidades.tsx";
+import PularNav from "./PularNav.tsx";
 
 export function NavBar() {
   const [sidebar, setSidebar] = useState(false);
@@ -51,6 +52,7 @@ export function NavBar() {
 
   return (
     <nav className={style.nav_bar}>
+      <PularNav />
       <div className={style.menu_esquerda}>
         <div className={style.menu}>
           <Link to="#" className={style.menu_barra}>

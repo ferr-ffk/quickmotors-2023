@@ -1,0 +1,18 @@
+.pular_nav {
+  position: absolute;
+  left: 1.5rem;
+  transform: translateY(-180%);
+
+  background-color: var(--cinza);
+
+  color: white !important;
+  z-index: 3;
+
+  transition: transform 325ms ease-in;
+
+  font-size: 1.125rem;
+}
+
+.pular_nav:focus {
+  transform: translateY(0);
+}

@@ -3,12 +3,12 @@ import styles from "./PaginaNaoEncontrada.module.css";
 
 function PaginaNaoEncontrada() {
   return (
-    <section className={styles.container_nao_encontrada}>
+    <main id="conteudo-principal" className={styles.container_nao_encontrada}>
       <h1>Página não encontrada...</h1>
       <p>
         <Link to="/">Voltar para a página principal</Link>
       </p>
-    </section>
+    </main>
   );
 }
 

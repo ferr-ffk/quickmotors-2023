@@ -14,7 +14,7 @@ function FormCadastro({ submit, tipo }: Props) {
   };
 
   return (
-    <form className={style.form} onSubmit={submit}>
+    <form id="conteudo-principal" className={style.form} onSubmit={submit}>
       <div>
         <TextLabel htmlFor="email" obrigatorio={true}>
           Endereço de e-mail

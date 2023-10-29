@@ -7,7 +7,7 @@ import * as Bi from "react-icons/bi";
 function Forum() {
   return (
     <>
-      <main className={style.forum}>
+      <main id="conteudo-principal" className={style.forum}>
         <Comentario
           usuario={"nando.lxz"}
           titulo={"Meu carro quebrou"}

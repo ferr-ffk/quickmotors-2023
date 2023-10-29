@@ -15,7 +15,7 @@ function PaginaCadastro({ linkLogin, tipoLogin, submit }: Props) {
   const isLoginUsuario = tipoLogin === "usuario";
 
   return (
-    <div className={styleUsuario.container}>
+    <div id="conteudo-principal" className={styleUsuario.container}>
       <h1
         // verifica qual é o estilo a ser aplicado e então aplica conforme os arquivos css
         className={
