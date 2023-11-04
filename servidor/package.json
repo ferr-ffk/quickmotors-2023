@@ -7,7 +7,7 @@
   "scripts": {
     "start": "nodemon index.js"
   },
-  "author": "Fernando Freitas de Lira, Davi Gomes de Sousa, Giovanni Zorzetto de Oliveira, Giovanni Foliene Luciano, Gabriel Martins Rocha",
+  "author": "Fernando Freitas de Lira",
   "license": "ISC",
   "dependencies": {
     "cors": "^2.8.5",
