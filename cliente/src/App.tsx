@@ -6,8 +6,8 @@ import Forum from "./components/paginas/Forum";
 import PaginaNaoEncontrada from "./components/paginas/PaginaNaoEncontrada";
 import { Navigate } from "../node_modules/react-router-dom/dist/index";
 import PaginaCriarUsuario from "./components/PaginaCriarUsuario";
-import CadastroUsuario from "./components/paginas/CadastroUsuario";
-import CadastroMecanico from "./components/paginas/CadastroMecanico";
+import CadastroUsuario from "./components/paginas/PaginaCadastroUsuario";
+import CadastroMecanico from "./components/paginas/PaginaCadastroMecanico";
 import PaginaComentario from "./components/paginas/comentario/PaginaComentario";
 
 export function App() {

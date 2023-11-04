@@ -6,10 +6,23 @@ import FormCadastro from "./cadastro/FormCadastro";
 interface Props {
   tipoLogin: "usuario" | "mecanico";
   linkLogin: string;
-  submit: () => void;
+  submit: (u: any) => void;
+
+  onChangeEmail: (u: any) => void;
+  onChangeSenha: (u: any) => void;
+  onChangeConfirmar: (u: any) => void;
+  onChangeApelido: (u: any) => void;
 }
 
-function PaginaCadastro({ linkLogin, tipoLogin, submit }: Props) {
+function PaginaCadastro({
+  linkLogin,
+  tipoLogin,
+  submit,
+  onChangeEmail,
+  onChangeSenha,
+  onChangeConfirmar,
+  onChangeApelido,
+}: Props) {
   const { cadastroVisivel, exibirCadastro } = useCadastroVisivel();
 
   const isLoginUsuario = tipoLogin === "usuario";
@@ -28,7 +41,14 @@ function PaginaCadastro({ linkLogin, tipoLogin, submit }: Props) {
       </h1>
 
       {cadastroVisivel ? (
-        <FormCadastro submit={submit} tipo={tipoLogin} />
+        <FormCadastro
+          submit={submit}
+          tipo={tipoLogin}
+          handleChangeEmail={onChangeEmail}
+          handleChangeSenha={onChangeSenha}
+          handleChangeConfirmar={onChangeConfirmar}
+          handleChangeApelido={onChangeApelido}
+        />
       ) : (
         <>
           <a

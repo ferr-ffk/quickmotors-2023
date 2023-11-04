@@ -50,9 +50,8 @@
     --cor-fundo-escuro: #858585;
   }
 
-  a:focus,
-  a:hover {
-    color: #830000;
+  a {
+    color: var(--cor-primaria);
   }
 }
 
@@ -84,7 +83,6 @@ h1 {
   font-family: "Lato", sans-serif;
   font-weight: 800;
 
-  font-size: var(--fs-xl) !important;
 }
 
 /* subtítulo da página */

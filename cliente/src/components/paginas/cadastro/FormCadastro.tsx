@@ -4,13 +4,32 @@ import TextLabel from "../../layout/TextLabel";
 import style from "./FormCadastro.module.css";
 
 interface Props {
-  submit: () => void;
+  submit: (u: any) => void;
   tipo: "mecanico" | "usuario";
+
+  handleChangeIdMecanico?: (u: any) => void;
+  handleChangeRadio?: (u: any) => void;
+
+  handleChangeEmail: (u: any) => void;
+  handleChangeSenha: (u: any) => void;
+  handleChangeConfirmar: (u: any) => void;
+
+  handleChangeApelido: (u: any) => void;
 }
 
-function FormCadastro({ submit, tipo }: Props) {
+function FormCadastro({
+  submit,
+  tipo,
+  handleChangeIdMecanico,
+  handleChangeEmail,
+  handleChangeSenha,
+  handleChangeConfirmar,
+  handleChangeRadio,
+  handleChangeApelido,
+}: Props) {
   const handleSubmit = (event: any) => {
     event?.preventDefault();
+    submit(event);
   };
 
   return (
@@ -24,41 +43,48 @@ function FormCadastro({ submit, tipo }: Props) {
           classeCSS="email"
           tipo="email"
           placeholder="Digite seu e-mail"
+          onChange={handleChangeEmail}
         />
       </div>
-
       <div>
         <TextLabel htmlFor="senha" obrigatorio={true}>
           Entre com uma senha:
         </TextLabel>
-        <Input tipo="password" placeholder="" id="senha" />
+        <Input
+          tipo="password"
+          placeholder=""
+          id="senha"
+          onChange={handleChangeSenha}
+        />
       </div>
-
       <div>
         <TextLabel htmlFor="senha_confirmar" obrigatorio={true}>
           Confirme a senha:
         </TextLabel>
-        <Input tipo="password" placeholder="" id="senha_confirmar" />
+        <Input
+          tipo="password"
+          placeholder=""
+          id="senha_confirmar"
+          onChange={handleChangeConfirmar}
+        />
       </div>
-
       {tipo === "mecanico" && (
         <div>
           {/* // TODO Validar o CPF ou o MEI */}
           <RadioLabel
             campos={["CPF", "MEI"]}
-            onChange={function (): void {
-              throw new Error("Não implementei ne pae.");
-            }}
+            onChange={handleChangeRadio}
+            nome="id_mecanico"
           />
           <Input
             classeCSS="id_mecanico"
             id="id_mecanico"
             tipo="text"
             placeholder="Digite seu CPF"
+            onChange={handleChangeIdMecanico}
           />
         </div>
       )}
-
       <div>
         <TextLabel obrigatorio={false} htmlFor="apelido">
           Opcional: Escolha um apelido!
@@ -68,9 +94,9 @@ function FormCadastro({ submit, tipo }: Props) {
           classeCSS="apelido"
           tipo="text"
           placeholder="@usuario"
+          onChange={handleChangeApelido}
         />
       </div>
-
       <button
         className={
           tipo === "usuario" ? style.enviar_usuario : style.enviar_mecanico

@@ -4,7 +4,7 @@ export default interface Usuario {
   img: string;
 
   email: string;
-  nomeUsuario: string;
+  apelido: string;
   senha: string;
 
   veiculoUsado?: Veiculo;

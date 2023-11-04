@@ -3,10 +3,11 @@ import style from "./RadioLabel.module.css";
 interface Props {
   legenda?: string;
   campos: string[];
-  onChange: () => void;
+  onChange: ((u: any) => void) | undefined;
+  nome: string;
 }
 
-function RadioLabel({ legenda, campos, onChange }: Props) {
+function RadioLabel({ legenda, campos, onChange, nome }: Props) {
   return (
     <>
       <fieldset className={style.fieldset}>
@@ -18,7 +19,7 @@ function RadioLabel({ legenda, campos, onChange }: Props) {
               <input
                 onChange={onChange}
                 type="radio"
-                name="id_mecanico"
+                name={nome}
                 id={campo}
               />
               <label htmlFor={campo}>{campo}</label>
