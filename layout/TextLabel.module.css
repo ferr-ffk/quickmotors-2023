@@ -1,0 +1,17 @@
+.label {
+  position: relative;
+
+  font-size: 1.125rem;
+  margin: 0.125rem 0;
+}
+
+.label.obrigatorio::after {
+  content: "*";
+
+  position: absolute;
+  top: -0.75rem;
+  right: -1rem;
+
+  font-size: 1.75rem;
+  color: var(--cor-erro);
+}

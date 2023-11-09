@@ -1,0 +1,36 @@
+.container_nao_encontrada {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  width: 80%;
+  margin-inline: auto;
+
+  height: 100%;
+  width: 100%;
+}
+
+@media (max-width: 767px) {
+  .container_nao_encontrada {
+    padding: 5rem 0;
+    gap: 4rem;
+  }
+
+  .container_nao_encontrada h1 {
+    font-size: 3rem !important;
+  }
+}
+
+.container_nao_encontrada h1 {
+  text-align: center;
+  width: 80%;
+  margin-inline: auto;
+
+  font-size: 4.5rem;
+}
+
+.container_nao_encontrada p a {
+  font-size: 1.5rem;
+  text-decoration: underline;
+}

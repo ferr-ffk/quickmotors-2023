@@ -1,0 +1,52 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 2.5rem;
+
+  height: 100%;
+}
+
+@media (max-width: 767px) {
+  .container {
+    justify-content: center;
+  }
+}
+
+.paragrafo_login {
+  font-size: 1.5em;
+  font-weight: 800;
+}
+
+.titulo_pagina {
+  padding: 1rem;
+  font-size: 3.75rem;
+
+  border-bottom: 2px solid black;
+}
+
+.titulo_pagina::after {
+  content: "Usuário";
+  color: var(--cor-primaria);
+
+  position: absolute;
+  top: 60%;
+  left: 80%;
+
+  font-size: 2rem;
+}
+
+.link_login {
+  color: var(--cor-primaria);
+}
+
+.link_login:hover {
+  cursor: pointer !important;
+}
+
+.link_cadastrar {
+  color: #000;
+  text-decoration: underline;
+  font-size: 1.25em;
+}

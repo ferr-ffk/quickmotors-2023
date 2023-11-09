@@ -1,0 +1,58 @@
+.link_btn {
+  --tamanho-borda: 5rem;
+  --altura-pesquisa: 3rem;
+  --espacamento-pesquisa: 0 1.25rem;
+
+  color: var(--preto);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: var(--espacamento-pesquisa);
+  font-weight: bolder;
+  font-size: 1.5rem;
+  border-radius: var(--tamanho-borda);
+  min-height: var(--altura-pesquisa);
+  width: 7.5em;
+}
+
+.cadastro {
+  background-color: var(--cor-secundaria);
+}
+
+.cadastro:focus,
+.cadastro:hover {
+  background-color: var(--cor-primaria);
+  color: #fff;
+}
+
+.duvida {
+  width: max-content;
+  gap: 0.5rem;
+
+  background-color: var(--cor-primaria);
+  color: white;
+
+  width: 15rem;
+  font-size: 1.5rem;
+  aspect-ratio: 31 / 9;
+}
+
+.duvida:hover,
+.duvida:focus {
+  background-color: var(--cor-erro);
+  color: white;
+}
+
+/* anima o cadeado pra aparecer apenas quando o mouse estiver em cima do link */
+.duvida svg {
+  opacity: 0;
+  position: absolute;
+}
+
+.duvida:is(:hover) svg {
+  transition: ease-in 250ms;
+  position: static;
+  opacity: 1;
+}

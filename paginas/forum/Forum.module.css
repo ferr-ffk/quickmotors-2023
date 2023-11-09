@@ -1,0 +1,47 @@
+.forum {
+  border-left: 1px solid var(--cor-borda);
+  border-right: 1px solid var(--cor-borda);
+
+  min-height: calc(12.5rem * 10);
+  max-height: 100%;
+
+  width: 60%;
+  margin-left: 10rem;
+}
+
+/* centraliza o botão de realizar dúvida se for um tablet/celular */
+@media (max-width: 767px) {
+  .forum {
+    margin-inline: auto;
+
+    width: 80%;
+  }
+
+  .aside a {
+    margin-inline: auto !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .forum {
+    border: none;
+    width: 100%;
+  }
+}
+
+.aside {
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  justify-content: center;
+
+  width: 100%;
+
+  position: fixed;
+  bottom: 7.75rem;
+  z-index: 2;
+}
+
+.aside a {
+  margin-right: 5rem;
+}

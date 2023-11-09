@@ -1,0 +1,26 @@
+.titulo_pagina {
+  padding: 1rem;
+  font-size: 3.75rem;
+
+  border-bottom: 2px solid black;
+}
+
+.titulo_pagina::after {
+  content: "Mecânico";
+  color: var(--cor-secundaria);
+
+  position: absolute;
+  top: 60%;
+  left: 80%;
+
+  font-size: 2rem;
+}
+
+.link_login {
+  color: var(--cor-secundaria);
+  text-decoration: underline;
+}
+
+.link_login:hover {
+  cursor: pointer !important;
+}
