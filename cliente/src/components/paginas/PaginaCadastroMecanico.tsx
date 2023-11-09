@@ -7,8 +7,15 @@ function CadastroMecanico() {
       linkLogin="login/mecanico"
       submit={function (): void {
         throw new Error("Function not implemented.");
-      }}
-    />
+      } } onChangeEmail={function (u: any): void {
+        throw new Error("Function not implemented.");
+      } } onChangeSenha={function (u: any): void {
+        throw new Error("Function not implemented.");
+      } } onChangeConfirmar={function (u: any): void {
+        throw new Error("Function not implemented.");
+      } } onChangeApelido={function (u: any): void {
+        throw new Error("Function not implemented.");
+      } }    />
   );
 }
 

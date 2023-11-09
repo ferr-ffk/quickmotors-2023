@@ -72,9 +72,10 @@ function FormCadastro({
         <div>
           {/* // TODO Validar o CPF ou o MEI */}
           <RadioLabel
+            legenda="Identificador da empresa:"
             campos={["CPF", "MEI"]}
             onChange={handleChangeRadio}
-            nome="id_mecanico"
+            nome="id_mecanico" 
           />
           <Input
             classeCSS="id_mecanico"
