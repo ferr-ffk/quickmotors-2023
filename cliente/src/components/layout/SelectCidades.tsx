@@ -1,4 +1,5 @@
 import { cidades } from "../../modelo/Cidades";
+import style from "./SelectCidades.module.css";
 
 interface Props {
   onChange: React.ChangeEventHandler<HTMLSelectElement>;
@@ -6,7 +7,7 @@ interface Props {
 
 function SelectCidades({ onChange }: Props) {
   return (
-    <select onChange={onChange} name="cidades" id="cidades">
+    <select className={style.select} onChange={onChange} name="cidades" id="cidades">
       {cidades.map((cidade) => {
         return (
           <option value={cidade}>

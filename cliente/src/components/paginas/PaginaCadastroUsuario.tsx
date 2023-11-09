@@ -5,6 +5,7 @@ import { useState } from "react";
 
 function Cadastro() {
   const navigate = useNavigate();
+
   const [usuario, setUsuario] = useState<Usuario>({
     email: "",
     img: "",
@@ -29,11 +30,12 @@ function Cadastro() {
 
   function handleChangeConfirmar(event: any): void {
     const senha = document.querySelector<HTMLInputElement>("#senha")?.value;
-    const confirmar = document.querySelector<HTMLInputElement>("#senha_confirmar")?.value;
+    const confirmar =
+      document.querySelector<HTMLInputElement>("#senha_confirmar")?.value;
 
     let senhaConfirmada: boolean = senha === confirmar;
 
-    if(senhaConfirmada) {
+    if (senhaConfirmada) {
       setUsuario({ ...usuario, senha: event.target.value });
     } else {
       console.log("As senhas devem ser iguais!");
@@ -48,12 +50,10 @@ function Cadastro() {
     <PaginaCadastro
       tipoLogin="usuario"
       linkLogin="login/usuario"
-
       onChangeEmail={handleChangeEmail}
       onChangeSenha={handleChangeSenha}
       onChangeConfirmar={handleChangeConfirmar}
       onChangeApelido={handleChangeApelido}
-
       submit={handleSubmit}
     />
   );
