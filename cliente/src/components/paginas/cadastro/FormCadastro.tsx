@@ -27,6 +27,7 @@ function FormCadastro({
   handleChangeRadio,
   handleChangeApelido,
 }: Props) {
+  
   const handleSubmit = (event: any) => {
     event?.preventDefault();
     submit(event);

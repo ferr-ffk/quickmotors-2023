@@ -4,7 +4,7 @@ interface Props {
   id: string;
   tipo: string;
   placeholder: string;
-  classeCSS?: string;
+  classeCSS: string;
   pattern?: string;
   onChange: ((u: any) => void) | undefined;
 }

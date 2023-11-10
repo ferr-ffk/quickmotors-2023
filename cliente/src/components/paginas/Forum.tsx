@@ -8,69 +8,7 @@ function Forum() {
   return (
     <>
       <main id="conteudo-principal" className={style.forum}>
-        <Comentario
-          usuario={"nando.lxz"}
-          titulo={"Meu carro quebrou"}
-          texto={"Ai que n sei o que n sei o que lá"}
-          data={"Há 10 minutos"}
-          veiculo={"Carro"}
-        />
-        <Comentario
-          usuario={"nando.lxz"}
-          titulo={"Meu carro quebrou"}
-          texto={"Ai que n sei o que n sei o que lá"}
-          data={"Há 10 minutos"}
-          veiculo={"Carro"}
-        />
-        <Comentario
-          usuario={"nando.lxz"}
-          titulo={"Meu carro quebrou"}
-          texto={"Ai que n sei o que n sei o que lá"}
-          data={"Há 10 minutos"}
-          veiculo={"Carro"}
-        />
-        <Comentario
-          usuario={"nando.lxz"}
-          titulo={"Meu carro quebrou"}
-          texto={"Ai que n sei o que n sei o que lá"}
-          data={"Há 10 minutos"}
-          veiculo={"Carro"}
-        />
-        <Comentario
-          usuario={"nando.lxz"}
-          titulo={"Meu carro quebrou"}
-          texto={"Ai que n sei o que n sei o que lá"}
-          data={"Há 10 minutos"}
-          veiculo={"Carro"}
-        />
-        <Comentario
-          usuario={"nando.lxz"}
-          titulo={"Meu carro quebrou"}
-          texto={"Ai que n sei o que n sei o que lá"}
-          data={"Há 10 minutos"}
-          veiculo={"Carro"}
-        />
-        <Comentario
-          usuario={"nando.lxz"}
-          titulo={"Meu carro quebrou"}
-          texto={"Ai que n sei o que n sei o que lá"}
-          data={"Há 10 minutos"}
-          veiculo={"Carro"}
-        />
-        <Comentario
-          usuario={"nando.lxz"}
-          titulo={"Meu carro quebrou"}
-          texto={"Ai que n sei o que n sei o que lá"}
-          data={"Há 10 minutos"}
-          veiculo={"Carro"}
-        />
-        <Comentario
-          usuario={"nando.lxz"}
-          titulo={"Meu carro quebrou"}
-          texto={"Ai que n sei o que n sei o que lá"}
-          data={"Há 10 minutos"}
-          veiculo={"Carro"}
-        />
+        {/* // TODO foreach dos comentarios no banco */}
       </main>
       <aside className={style.aside}>
         <LinkButton classCSS="duvida" para="/cadastro">

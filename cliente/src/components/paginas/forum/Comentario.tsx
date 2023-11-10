@@ -1,7 +1,18 @@
 import styles from "./Comentario.module.css";
 import IComentario from "../../../modelo/Comentario";
+import Usuario from "../../../modelo/Usuario";
+import { useState } from "react";
 
 function Comentario({ usuario, titulo, texto, veiculo, data }: IComentario) {
+  const [usuarioObj, setUsuario] = useState<Usuario>({
+    apelido: "",
+    email: "",
+    senha: "",
+    img: "",
+  });
+
+  // TODO pegar objeto usuario no banco  
+
   return (
     <article className={styles.comentario}>
       <div className={styles.icone_usuario}>
@@ -10,7 +21,7 @@ function Comentario({ usuario, titulo, texto, veiculo, data }: IComentario) {
 
       <div className="conteudo_comentario">
         <strong>
-          @{usuario} &bull; {data}
+          @{usuarioObj.apelido} &bull; {data}
         </strong>
 
         <h3>

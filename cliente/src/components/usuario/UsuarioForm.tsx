@@ -8,7 +8,7 @@ interface Props {
 
 function UsuarioForm({ btnText, handleSubmit }: Props) {
   const [usuario, setUsuario] = useState<Usuario>({
-    nomeUsuario: "",
+    apelido: "",
     email: "",
     senha: "",
 

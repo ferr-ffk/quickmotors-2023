@@ -15,20 +15,35 @@ function Cadastro() {
 
   // função para criar requisição POST de um usuário no sistema
   const handleSubmit = () => {
-    // TODO fetch para mandar usuário
+    console.log(usuario);
+    fetch("http://localhost:8080/usuario", {
+      method: "POST",
+      headers: {
+        "Content-type": "application/json",
+      },
+      body: JSON.stringify(usuario),
+    })
+      .then((resp) => resp.json())
+      .then((data) => {
+        console.log(data);
+        navigate("/");
+      })
+      .catch((err) => console.log(err));
   };
 
-  function handleChangeEmail(event: any): void {
+  function handleChangeEmail(event: React.ChangeEvent<HTMLInputElement>): void {
     // se o usuário não especificar um apelido, será definido como o email
     setUsuario({ ...usuario, [event.target.name]: event.target.value });
-    setUsuario({ ...usuario, apelido: event.target.value });
-  }
-
-  function handleChangeSenha(event: any): void {
     setUsuario({ ...usuario, [event.target.name]: event.target.value });
+    console.log(usuario);
   }
 
-  function handleChangeConfirmar(event: any): void {
+  function handleChangeSenha(event: React.ChangeEvent<HTMLInputElement>): void {
+    setUsuario({ ...usuario, [event.target.name]: event.target.value });
+    console.log(usuario);
+  }
+
+  function handleChangeConfirmar(event: React.ChangeEvent<HTMLInputElement>): void {
     const senha = document.querySelector<HTMLInputElement>("#senha")?.value;
     const confirmar =
       document.querySelector<HTMLInputElement>("#senha_confirmar")?.value;
@@ -36,14 +51,19 @@ function Cadastro() {
     let senhaConfirmada: boolean = senha === confirmar;
 
     if (senhaConfirmada) {
-      setUsuario({ ...usuario, senha: event.target.value });
+      setUsuario({ ...usuario, [event.target.name]: event.target.value });
     } else {
       console.log("As senhas devem ser iguais!");
     }
   }
 
-  function handleChangeApelido(event: any): void {
+
+  // a porra do form n ta identificando o valor do input do email
+
+
+  function handleChangeApelido(event: React.ChangeEvent<HTMLInputElement>): void {
     setUsuario({ ...usuario, [event.target.name]: event.target.value });
+    console.log(usuario);
   }
 
   return (
