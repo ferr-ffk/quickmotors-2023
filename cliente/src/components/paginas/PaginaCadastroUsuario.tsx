@@ -16,6 +16,17 @@ function Cadastro() {
   // função para criar requisição POST de um usuário no sistema
   const handleSubmit = () => {
     console.log(usuario);
+
+    const senha = document.querySelector<HTMLInputElement>("#senha")?.value;
+    const confirmar =
+      document.querySelector<HTMLInputElement>("#senha_confirmar")?.value;
+
+    let senhaConfirmada: boolean = senha === confirmar;
+
+    if (!senhaConfirmada) {
+      return;
+    }
+
     fetch("http://localhost:8080/usuario", {
       method: "POST",
       headers: {
@@ -43,7 +54,9 @@ function Cadastro() {
     console.log(usuario);
   }
 
-  function handleChangeConfirmar(event: React.ChangeEvent<HTMLInputElement>): void {
+  function handleChangeConfirmar(
+    event: React.ChangeEvent<HTMLInputElement>
+  ): void {
     const senha = document.querySelector<HTMLInputElement>("#senha")?.value;
     const confirmar =
       document.querySelector<HTMLInputElement>("#senha_confirmar")?.value;
@@ -51,17 +64,20 @@ function Cadastro() {
     let senhaConfirmada: boolean = senha === confirmar;
 
     if (senhaConfirmada) {
-      setUsuario({ ...usuario, [event.target.name]: event.target.value });
+      setUsuario({ ...usuario, senha: event.target.value });
     } else {
-      console.log("As senhas devem ser iguais!");
+      let paragrafo =
+        document.querySelector<HTMLParagraphElement>("#senha_status");
+
+      if (paragrafo != undefined) {
+        paragrafo.innerHTML = "As senhas devem ser iguais!";
+      }
     }
   }
 
-
-  // a porra do form n ta identificando o valor do input do email
-
-
-  function handleChangeApelido(event: React.ChangeEvent<HTMLInputElement>): void {
+  function handleChangeApelido(
+    event: React.ChangeEvent<HTMLInputElement>
+  ): void {
     setUsuario({ ...usuario, [event.target.name]: event.target.value });
     console.log(usuario);
   }

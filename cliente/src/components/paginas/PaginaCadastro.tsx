@@ -2,6 +2,7 @@ import styleUsuario from "./cadastro/CadastroUsuario.module.css";
 import styleMecanico from "./cadastro/CadastroMecanico.module.css";
 import useCadastroVisivel from "../../hook/UseCadastroVisivel";
 import FormCadastro from "./cadastro/FormCadastro";
+import { useNavigate } from "react-router-dom";
 
 interface Props {
   tipoLogin: "usuario" | "mecanico";
@@ -12,6 +13,7 @@ interface Props {
   onChangeSenha: (u: any) => void;
   onChangeConfirmar: (u: any) => void;
   onChangeApelido: (u: any) => void;
+  onChangeIdMecanico?: (u: any) => void;
 }
 
 function PaginaCadastro({
@@ -22,10 +24,18 @@ function PaginaCadastro({
   onChangeSenha,
   onChangeConfirmar,
   onChangeApelido,
+  onChangeIdMecanico,
 }: Props) {
   const { cadastroVisivel, exibirCadastro } = useCadastroVisivel();
+  const navigate = useNavigate();
 
   const isLoginUsuario = tipoLogin === "usuario";
+
+  // como o href do elemento 'a' redireciona para um caminho relativo ao link,
+  // tem que usar o useNavigate para redirecionar para um caminho dado no componente
+  const navigateLink = () => {
+    navigate(linkLogin);
+  }
 
   return (
     <div id="conteudo-principal" className={styleUsuario.container}>
@@ -42,6 +52,7 @@ function PaginaCadastro({
 
       {cadastroVisivel ? (
         <FormCadastro
+          handleChangeIdMecanico={onChangeIdMecanico}
           submit={submit}
           tipo={tipoLogin}
           handleChangeEmail={onChangeEmail}
@@ -66,7 +77,8 @@ function PaginaCadastro({
                   ? styleUsuario.link_login
                   : styleMecanico.link_login
               }
-              href={linkLogin}
+              href="#"
+              onClick={navigateLink}
             >
               Entre
             </a>

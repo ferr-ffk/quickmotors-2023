@@ -1,5 +1,5 @@
 .input {
-  --cor-texto: var(--cinza-escuro);
+  --cor-texto: rgb(170, 170, 170);
 
   padding: 0.8rem;
   border-radius: 0.45rem;
@@ -7,6 +7,10 @@
   font-size: 1.25rem;
   border: none;
 
+  color: var(--cor-texto);
+}
+
+.input::placeholder {
   color: var(--cor-texto);
 }
 

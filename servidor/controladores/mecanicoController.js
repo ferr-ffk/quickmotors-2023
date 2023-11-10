@@ -1,7 +1,7 @@
 import { db } from "../db.js";
 
-export const getUsuarios = (req, res) => {
-  const sql = "SELECT * FROM usuarios";
+export const getMecanico = (req, res) => {
+  const sql = "SELECT * FROM mecanicos";
 
   db.query(sql, (err, data) => {
     if (err) return res.json(err);
@@ -10,8 +10,8 @@ export const getUsuarios = (req, res) => {
   });
 };
 
-export const getUsuariosPorId = (req, res) => {
-  const sql = "SELECT * FROM usuarios WHERE `usuarios`.`id_usuario` = ?";
+export const getMecanicoPorId = (req, res) => {
+  const sql = "SELECT * FROM mecanicos WHERE `mecanicos`.`id` = ?";
 
   db.query(sql, [req.params.id], (err, data) => {
     if(err) return res.json(err);
@@ -20,8 +20,8 @@ export const getUsuariosPorId = (req, res) => {
   });
 };
 
-export const postUsuarios = (req, res) => {
-  const sql = "INSERT INTO usuarios (`email`,`senha`) VALUES(?)"
+export const postMecanico = (req, res) => {
+  const sql = "INSERT INTO mecanicos (`email`,`senha`) VALUES(?)"
 
   const values = [req.body.email, req.body.senha];
 
@@ -32,12 +32,12 @@ export const postUsuarios = (req, res) => {
   })
 };
 
-export const putUsuarios = (req, res) => {
+export const putMecanico = (req, res) => {
   // TODO implementar CRUD
 };
 
-export const deleteUsuarios = (req, res) => {
-  const sql = "DELETE FROM usuarios WHERE `id_usuario` = ?";
+export const deleteMecanico = (req, res) => {
+  const sql = "DELETE FROM mecanicos WHERE `id_usuario` = ?";
 
   db.query(sql, [req.params.id], (error) => {
     if (error) return res.json(err);

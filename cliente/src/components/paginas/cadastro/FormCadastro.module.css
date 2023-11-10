@@ -43,6 +43,17 @@
 }
 
 .enviar_usuario:hover,
-.enviar_mecanico:focus {
+.enviar_mecanico:hover,
+.enviar_mecanico:hover,
+.enviar_mecanico:hover {
   box-shadow: 0 0.125rem 0.25rem rgba(0 0 0 / 0.29);
+}
+
+#senha_status {
+  font-weight: 700;
+  font-size: 1.125rem;
+
+  color: var(--cor-erro);
+
+  margin: .525rem 0;
 }

@@ -27,7 +27,6 @@ function FormCadastro({
   handleChangeRadio,
   handleChangeApelido,
 }: Props) {
-  
   const handleSubmit = (event: any) => {
     event?.preventDefault();
     submit(event);
@@ -56,6 +55,7 @@ function FormCadastro({
           placeholder=""
           id="senha"
           onChange={handleChangeSenha}
+          classeCSS={""}
         />
       </div>
       <div>
@@ -67,7 +67,9 @@ function FormCadastro({
           placeholder=""
           id="senha_confirmar"
           onChange={handleChangeConfirmar}
+          classeCSS={""}
         />
+        <p id={style.senha_status}></p>
       </div>
       {tipo === "mecanico" && (
         <div>
