@@ -112,3 +112,13 @@ img {
   max-height: 100%;
   max-width: 100%;
 }
+
+/* para elementos que precisam de títulos e descrições acessíveis, essa classe funciona para "esconder" o texto,
+mas ainda irá aparecer leitores de tela */
+.acessibilidade {
+  position:absolute;
+  left:-9999px;
+  width:100px;
+  height:auto;
+  overflow:hidden;
+}
