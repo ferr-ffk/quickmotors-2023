@@ -35,8 +35,6 @@ export function PaginaComentario() {
       });
   }, []);
 
-  // FIXME: to cansado man n da pra fazer 2 requisições ao mesmo tempo a segunda n vaiiii
-
   return (
     <main id="conteudo-principal" className={style.main}>
       <div className={style.comentario}>
@@ -59,12 +57,7 @@ export function PaginaComentario() {
           <button className={style.botao_responder}>Responder</button>
         </div>
       </div>
-      <RespostaComentario
-        numero_estrelas={15}
-        nome_mecanico="Mecânico"
-        avaliacao_mecanico={10}
-        texto={"asdawdaawdad"}
-      />
+      <RespostaComentario idComentario={comentario.id} />
     </main>
   );
 }

@@ -15,7 +15,7 @@ function LoginUsuario() {
     apelido: "",
   });
 
-  const [cookies, setCookie] = useCookies(["usuario"]);
+  const [, setCookie] = useCookies(["usuario"]);
   const navigate = useNavigate();
 
   // busca os usuários no banco

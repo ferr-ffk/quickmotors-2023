@@ -1,7 +1,7 @@
 import { Mecanico } from "./Mecanico";
 import Usuario from "./Usuario";
 
-export interface RespostaComentario {
+export interface IRespostaComentario {
   usuario: Usuario | Mecanico;
   fk_Usuario_id: number;
   texto: string;
@@ -22,7 +22,7 @@ export default interface IComentario {
 
   avaliacao?: number;
 
-  respostas?: RespostaComentario | RespostaComentario[];
+  respostas?: IRespostaComentario | IRespostaComentario[];
 
   localização?: string;
 }
