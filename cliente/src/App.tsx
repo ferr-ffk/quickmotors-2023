@@ -25,7 +25,7 @@ export function App() {
           />
           <Route path="/cadastro/usuario" element={<CadastroUsuario />} />
           <Route path="/cadastro/mecanico" element={<CadastroMecanico />} />
-          <Route path="/comentarios" element={<PaginaComentario />} />
+          <Route path="/comentarios/:id" element={<PaginaComentario />} />
           <Route path="/login/usuario" element={<LoginUsuario />} />
           <Route path="/login/mecanico" element={<LoginMecanico />} />
 

@@ -9,6 +9,16 @@
   border-bottom: 1px solid var(--cor-borda);
 }
 
+.comentario a {
+  padding-block: .725rem;
+
+  display: flex;
+  flex-direction: row;
+  gap: .75rem;
+
+  color: var(--cor-texto);
+}
+
 .comentario h3 {
   font-size: 1.75rem;
 }

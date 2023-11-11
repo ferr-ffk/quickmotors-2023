@@ -1,5 +1,5 @@
 .nav_bar {
-  --tamanho-navbar: 3.75rem;
+  --tamanho-navbar: 5.75rem;
 
   height: var(--tamanho-navbar);
 
@@ -14,7 +14,7 @@
 
   width: 100%;
 
-  padding: 0.75rem 0;
+  padding: 1rem 0;
   background-color: var(--cor-fundo);
   border-bottom: 1px solid var(--cor-borda);
 }
@@ -91,17 +91,22 @@ a img {
   justify-content: start;
   align-items: start;
 
-  position: fixed;
+  position: absolute;
   top: 0;
   bottom: 0;
-  left: -100%;
+  transform: translateX(-100%);
   z-index: 10;
 
   transition: 850ms;
 }
 
+.nav_menu:has(a:focus) {
+  transform: translateX(0%);
+  transition: 350ms;
+}
+
 .nav_menu.ativo {
-  left: 0;
+  transform: translateX(0%);
   transition: 350ms;
 }
 

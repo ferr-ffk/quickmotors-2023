@@ -17,7 +17,10 @@ export function NavBar() {
   const [sidebar, setSidebar] = useState(false);
   const navigate = useNavigate();
 
-  const mostrarSidebar = () => setSidebar(!sidebar);
+  const mostrarSidebar = () => {
+    setSidebar(!sidebar);
+    navigate("/#fechar-sidebar");
+  };
 
   const handleSelect = (e: React.ChangeEvent<HTMLSelectElement>) => {
     navigate(`/comentarios/${e?.currentTarget.value}`);
@@ -30,10 +33,15 @@ export function NavBar() {
           sidebar ? style.nav_menu + " " + style.ativo : style.nav_menu
         }
       >
-        <Link className={style.fechar_sidebar} to="#" onClick={mostrarSidebar}>
+        <Link
+          id="fechar-sidebar"
+          className={style.fechar_sidebar}
+          to="#"
+          onClick={mostrarSidebar}
+        >
           <AiIcons.AiOutlineClose />
         </Link>
-        <h1>QuickMotors</h1>
+        <h1 id="titulo-nav">QuickMotors</h1>
         <ul className={style.nav_menu_items} onClick={mostrarSidebar}>
           {SidebarData.map((item, indice) => {
             return (
@@ -55,7 +63,11 @@ export function NavBar() {
       <PularNav />
       <div className={style.menu_esquerda}>
         <div className={style.menu}>
-          <Link to="#" className={style.menu_barra}>
+          <Link
+            onClick={mostrarSidebar}
+            to="#fechar-sidebar"
+            className={style.menu_barra}
+          >
             <Io5.IoMenuOutline onClick={mostrarSidebar} />
           </Link>
         </div>

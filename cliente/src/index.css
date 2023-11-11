@@ -50,9 +50,6 @@
     --cor-fundo-escuro: #858585;
   }
 
-  a {
-    color: var(--cor-primaria);
-  }
 }
 
 *,

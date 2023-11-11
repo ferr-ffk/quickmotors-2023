@@ -1,7 +1,7 @@
 .pular_nav {
   position: absolute;
   left: 1.5rem;
-  transform: translateY(-180%);
+  transform: translateY(-220%);
 
   background-color: var(--cinza);
 
