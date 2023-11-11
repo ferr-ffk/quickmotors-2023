@@ -47,7 +47,7 @@ function Comentario({ usuario, titulo, texto, veiculo, data, id }: Props) {
 
   return (
     <article className={styles.comentario}>
-      <a onClick={() => navigate(`/comentarios/${id}`)} href="#">
+      <a onClick={() => navigate(`/comentarios/${id}/${usuarioObj[0].apelido}`)} href="#">
         <div className={styles.icone_usuario}>
           <img
             src="https://digimedia.web.ua.pt/wp-content/uploads/2017/05/default-user-image.png"

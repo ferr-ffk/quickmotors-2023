@@ -24,7 +24,6 @@ function Forum() {
   return (
     <>
       <main id="conteudo-principal" className={style.forum}>
-        {/* // TODO foreach dos comentarios no banco */}
         {comentarios.map(
           (comentario: IComentario) => (
             (

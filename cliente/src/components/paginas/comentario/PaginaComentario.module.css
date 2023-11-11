@@ -20,6 +20,7 @@
 }
 
 .usuario {
+  max-height: 100%;
   border-radius: 50%;
 }
 
@@ -27,6 +28,10 @@
   display: flex;
   align-items: center;
   gap: 1.25rem;
+}
+
+.informacoes_usuario .usuario {
+  height: 5rem;
 }
 
 .informacoes_duvida {

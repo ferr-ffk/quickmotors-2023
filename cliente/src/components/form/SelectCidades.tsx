@@ -7,11 +7,16 @@ interface Props {
 
 function SelectCidades({ onChange }: Props) {
   return (
-    <select className={style.select} onChange={onChange} name="cidades" id="cidades">
+    <select
+      className={style.select}
+      onChange={onChange}
+      name="cidades"
+      id="cidades"
+    >
       {cidades.map((cidade) => {
         return (
-          <option value={cidade}>
-            <a href="#">{cidade}</a>
+          <option value={cidade} key={cidade}>
+            {cidade}
           </option>
         );
       })}

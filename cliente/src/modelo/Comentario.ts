@@ -1,8 +1,9 @@
 import { Mecanico } from "./Mecanico";
 import Usuario from "./Usuario";
 
-interface RespostaComentario {
+export interface RespostaComentario {
   usuario: Usuario | Mecanico;
+  fk_Usuario_id: number;
   texto: string;
 
   avaliacao: number;
@@ -10,7 +11,6 @@ interface RespostaComentario {
 
 export default interface IComentario {
   id: number;
-  usuario: Usuario;
   fk_Usuario_id: number;
 
   titulo: string;
