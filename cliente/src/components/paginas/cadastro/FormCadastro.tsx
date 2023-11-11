@@ -1,6 +1,6 @@
-import Input from "../../layout/Input";
-import RadioLabel from "../../layout/RadioLabel";
-import TextLabel from "../../layout/TextLabel";
+import Input from "../../form/Input";
+import RadioLabel from "../../form/RadioLabel";
+import TextLabel from "../../form/TextLabel";
 import style from "./FormCadastro.module.css";
 
 interface Props {

@@ -1,7 +1,12 @@
-import { useState, useEffect } from "react";
 import { Mecanico } from "../../modelo/Mecanico";
-import Input from "../layout/Input";
-import TextLabel from "../layout/TextLabel";
+
+import Input from "../form/Input";
+import TextLabel from "../form/TextLabel";
+
+import { useState, useEffect } from "react";
+import { useCookies } from "react-cookie";
+import { useNavigate } from "react-router-dom";
+
 import style from "./Login.module.css";
 
 function LoginMecanico() {
@@ -13,6 +18,9 @@ function LoginMecanico() {
     apelido: "",
     img: "",
   });
+
+  const [cookies, setCookie] = useCookies(["usuario"]);
+  const navigate = useNavigate();
 
   // busca os usuários no banco
   useEffect(() => {
@@ -43,6 +51,10 @@ function LoginMecanico() {
     setMecanico({ ...mecanico, [event.target.name]: event.target.value });
   };
 
+  function salvarLogin() {
+    setCookie("usuario", mecanico.email);
+  }
+
   const submit = () => {
     const resposta = mecanicos.find((u) => u.email === mecanico.email);
     const usuarioExiste = resposta !== undefined;
@@ -50,8 +62,9 @@ function LoginMecanico() {
     if (usuarioExiste) {
       const senhaIgual = resposta.senha === mecanico.senha;
       if (senhaIgual) {
-        // mecanico aprovado! login
         console.log(mecanico);
+        salvarLogin();
+        navigate("/");
       } else {
         let paragrafo =
           document.querySelector<HTMLParagraphElement>("#mensagem_erro");
@@ -107,6 +120,17 @@ function LoginMecanico() {
           Enviar
         </button>
       </form>
+      <p className={style.paragrafo_outro}>
+        Entrar como{" "}
+        <a
+          href="#"
+          onClick={() => {
+            navigate("/login/usuario");
+          }}
+        >
+          usuário
+        </a>
+      </p>
     </div>
   );
 }

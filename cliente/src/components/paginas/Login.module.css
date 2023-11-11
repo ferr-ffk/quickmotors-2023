@@ -97,3 +97,11 @@
 
   color: var(--cor-cinza);
 }
+
+.paragrafo_outro {
+  font-size: 1.325rem;
+}
+
+.paragrafo_outro a {
+  text-decoration: underline;
+}

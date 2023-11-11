@@ -1,4 +1,4 @@
-import LinkButton from "../layout/LinkButton";
+import LinkButton from "../form/LinkButton";
 import Comentario from "./forum/Comentario";
 import style from "./forum/Forum.module.css";
 

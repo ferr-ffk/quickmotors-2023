@@ -2,15 +2,15 @@ import style from "./NavBar.module.css";
 
 import logo from "../../../public/logo-quickmotors.png";
 
-import Pesquisa from "./Pesquisa";
-import LinkButton from "./LinkButton";
+import Pesquisa from "../form/Pesquisa.tsx";
+import LinkButton from "../form/LinkButton.tsx";
 import { Link, useNavigate } from "react-router-dom";
 import * as Io5 from "react-icons/io5";
 import * as AiIcons from "react-icons/ai";
 import { useState } from "react";
 
 import { SidebarData } from "./SideBarData.tsx";
-import SelectCidades from "./SelectCidades.tsx";
+import SelectCidades from "../form/SelectCidades.tsx";
 import PularNav from "./PularNav.tsx";
 
 export function NavBar() {
@@ -68,7 +68,7 @@ export function NavBar() {
         <LinkButton classCSS="cadastro" para="/cadastro">
           Cadastrar
         </LinkButton>
-        <LinkButton classCSS="login" para="/login">
+        <LinkButton classCSS="login" para="/login/usuario">
           Login
         </LinkButton>
       </div>

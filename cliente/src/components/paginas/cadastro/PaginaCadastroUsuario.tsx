@@ -1,20 +1,22 @@
 import { useNavigate } from "react-router-dom";
-import PaginaCadastro from "./PaginaCadastro";
+import Usuario from "../../../modelo/Usuario";
+import PaginaCadastro from "../PaginaCadastro";
 import { useState } from "react";
-import { Mecanico } from "../../modelo/Mecanico";
 
-function CadastroMecanico() {
+function Cadastro() {
   const navigate = useNavigate();
 
-  const [mecanico, setMecanico] = useState<Mecanico>({
+  const [usuario, setUsuario] = useState<Usuario>({
     email: "",
     img: "",
     senha: "",
-    id_mecanico: "",
+    apelido: "",
   });
 
   // função para criar requisição POST de um usuário no sistema
   const handleSubmit = () => {
+    console.log(usuario);
+
     const senha = document.querySelector<HTMLInputElement>("#senha")?.value;
     const confirmar =
       document.querySelector<HTMLInputElement>("#senha_confirmar")?.value;
@@ -25,12 +27,12 @@ function CadastroMecanico() {
       return;
     }
 
-    fetch("http://localhost:8080/mecanico", {
+    fetch("http://localhost:8080/usuario", {
       method: "POST",
       headers: {
         "Content-type": "application/json",
       },
-      body: JSON.stringify(mecanico),
+      body: JSON.stringify(usuario),
     })
       .then((resp) => resp.json())
       .then((data) => {
@@ -42,12 +44,14 @@ function CadastroMecanico() {
 
   function handleChangeEmail(event: React.ChangeEvent<HTMLInputElement>): void {
     // se o usuário não especificar um apelido, será definido como o email
-    setMecanico({ ...mecanico, [event.target.name]: event.target.value });
-    setMecanico({ ...mecanico, [event.target.name]: event.target.value });
+    setUsuario({ ...usuario, [event.target.name]: event.target.value });
+    setUsuario({ ...usuario, [event.target.name]: event.target.value });
+    console.log(usuario);
   }
 
   function handleChangeSenha(event: React.ChangeEvent<HTMLInputElement>): void {
-    setMecanico({ ...mecanico, [event.target.name]: event.target.value });
+    setUsuario({ ...usuario, [event.target.name]: event.target.value });
+    console.log(usuario);
   }
 
   function handleChangeConfirmar(
@@ -60,10 +64,10 @@ function CadastroMecanico() {
     let senhaConfirmada: boolean = senha === confirmar;
 
     if (senhaConfirmada) {
-      setMecanico({ ...mecanico, senha: event.target.value });
+      setUsuario({ ...usuario, senha: event.target.value });
     } else {
       let paragrafo =
-        document.querySelector<HTMLParagraphElement>(".senha_status");
+        document.querySelector<HTMLParagraphElement>("#senha_status");
 
       if (paragrafo != undefined) {
         paragrafo.innerHTML = "As senhas devem ser iguais!";
@@ -71,30 +75,24 @@ function CadastroMecanico() {
     }
   }
 
-  function handleChangeIdMecanico() {
-    const numeroCPF = document.querySelector<HTMLInputElement>("#id_mecanico")?.value;
-    setMecanico({ ...mecanico, id_mecanico: numeroCPF });
-    console.log(numeroCPF);
-  }
-
   function handleChangeApelido(
     event: React.ChangeEvent<HTMLInputElement>
   ): void {
-    setMecanico({ ...mecanico, [event.target.name]: event.target.value });
+    setUsuario({ ...usuario, [event.target.name]: event.target.value });
+    console.log(usuario);
   }
 
   return (
     <PaginaCadastro
-      tipoLogin="mecanico"
-      linkLogin="/login/mecanico"
+      tipoLogin="usuario"
+      linkLogin="login/usuario"
       onChangeEmail={handleChangeEmail}
       onChangeSenha={handleChangeSenha}
       onChangeConfirmar={handleChangeConfirmar}
-      onChangeIdMecanico={handleChangeIdMecanico}
       onChangeApelido={handleChangeApelido}
       submit={handleSubmit}
     />
   );
 }
 
-export default CadastroMecanico;
+export default Cadastro;

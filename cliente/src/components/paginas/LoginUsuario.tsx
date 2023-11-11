@@ -1,8 +1,10 @@
 import { useEffect, useState } from "react";
 import Usuario from "../../modelo/Usuario";
-import Input from "../layout/Input";
-import TextLabel from "../layout/TextLabel";
+import Input from "../form/Input";
+import TextLabel from "../form/TextLabel";
 import style from "./Login.module.css";
+import { useCookies } from "react-cookie";
+import { useNavigate } from "react-router-dom";
 
 function LoginUsuario() {
   const [usuarios, setUsuarios] = useState<Usuario[]>([]);
@@ -12,6 +14,9 @@ function LoginUsuario() {
     senha: "",
     apelido: "",
   });
+
+  const [cookies, setCookie] = useCookies(["usuario"]);
+  const navigate = useNavigate();
 
   // busca os usuários no banco
   useEffect(() => {
@@ -42,6 +47,10 @@ function LoginUsuario() {
     setUsuario({ ...usuario, [event.target.name]: event.target.value });
   };
 
+  function salvarLogin() {
+    setCookie("usuario", usuario.email);
+  }
+
   const submit = () => {
     const resposta = usuarios.find((u) => u.email === usuario.email);
     const usuarioExiste = resposta !== undefined;
@@ -49,8 +58,9 @@ function LoginUsuario() {
     if (usuarioExiste) {
       const senhaIgual = resposta.senha === usuario.senha;
       if (senhaIgual) {
-        // usuario aprovado! login
         console.log(usuario);
+        salvarLogin();
+        navigate("/");
       } else {
         let paragrafo =
           document.querySelector<HTMLParagraphElement>("#mensagem_erro");
@@ -102,8 +112,21 @@ function LoginUsuario() {
           />
         </div>
         <p id="mensagem_erro" className={style.mensagem_erro}></p>
-        <button className={style.botao_submit} onClick={submit}>Enviar</button>
+        <button className={style.botao_submit} onClick={submit}>
+          Enviar
+        </button>
       </form>
+      <p className={style.paragrafo_outro}>
+        Entrar como{" "}
+        <a
+          href="#"
+          onClick={() => {
+            navigate("/login/mecanico");
+          }}
+        >
+          mecânico
+        </a>
+      </p>
     </div>
   );
 }
