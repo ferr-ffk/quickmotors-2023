@@ -3,8 +3,8 @@ import Usuario from "../../modelo/Usuario";
 import Input from "../form/Input";
 import TextLabel from "../form/TextLabel";
 import style from "./Login.module.css";
-import { useCookies } from "react-cookie";
 import { useNavigate } from "react-router-dom";
+import SetCookie from "../../hook/SetCookie.tsx";
 
 function LoginUsuario() {
   const [usuarios, setUsuarios] = useState<Usuario[]>([]);
@@ -15,7 +15,6 @@ function LoginUsuario() {
     apelido: "",
   });
 
-  const [, setCookie] = useCookies(["usuario"]);
   const navigate = useNavigate();
 
   // busca os usuários no banco
@@ -48,7 +47,7 @@ function LoginUsuario() {
   };
 
   function salvarLogin() {
-    setCookie("usuario", usuario.email);
+    SetCookie('usuario', usuario.email);
   }
 
   const submit = () => {

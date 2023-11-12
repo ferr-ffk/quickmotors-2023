@@ -12,6 +12,8 @@ import { useState } from "react";
 import { SidebarData } from "./SideBarData.tsx";
 import SelectCidades from "../form/SelectCidades.tsx";
 import PularNav from "./PularNav.tsx";
+import GetCookieUsuario from "../../hook/GetCookieUsuario.tsx";
+import RemoveCookieUsuario from "../../hook/RemoveCookieUsuario.tsx";
 
 export function NavBar() {
   const [sidebar, setSidebar] = useState(false);
@@ -24,6 +26,11 @@ export function NavBar() {
 
   const handleSelect = (e: React.ChangeEvent<HTMLSelectElement>) => {
     navigate(`/comentarios/${e?.currentTarget.value}`);
+  };
+
+  const efetuarLogout = () => {
+    mostrarSidebar();
+    RemoveCookieUsuario();
   };
 
   const MenuLateral = () => {
@@ -54,9 +61,20 @@ export function NavBar() {
             );
           })}
         </ul>
+        {GetCookieUsuario() && (
+          <Link
+            className={style.logout}
+            onClick={efetuarLogout}
+            to="login/usuario"
+          >
+            Sair
+          </Link>
+        )}
       </nav>
     );
   };
+
+  console.log(GetCookieUsuario());
 
   return (
     <nav className={style.nav_bar}>
@@ -76,14 +94,19 @@ export function NavBar() {
 
         <SelectCidades onChange={handleSelect} />
       </div>
-      <div className={style.links}>
-        <LinkButton classCSS="cadastro" para="/cadastro">
-          Cadastrar
-        </LinkButton>
-        <LinkButton classCSS="login" para="/login/usuario">
-          Login
-        </LinkButton>
-      </div>
+
+      
+
+      {!GetCookieUsuario() && (
+        <div className={style.links}>
+          <LinkButton classCSS="cadastro" para="/cadastro">
+            Cadastrar
+          </LinkButton>
+          <LinkButton classCSS="login" para="/login/usuario">
+            Login
+          </LinkButton>
+        </div>
+      )}
 
       <Link to="/">
         <img src={logo} alt="Logo QuickMotors" />

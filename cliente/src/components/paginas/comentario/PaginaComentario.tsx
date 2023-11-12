@@ -3,9 +3,10 @@ import { useEffect, useState } from "react";
 
 import IComentario from "../../../modelo/Comentario";
 
-import RespostaComentario from "./RespostaComentario";
+import RespostasComentarios from "./RespostasComentario";
 
 import style from "./PaginaComentario.module.css";
+import Loading from "../../layout/Loading";
 
 export function PaginaComentario() {
   const { id, usuario } = useParams();
@@ -19,20 +20,25 @@ export function PaginaComentario() {
     veiculo: "Outros",
   });
 
+  const [removeLoading, setRemoveLoading] = useState(false);
+
   useEffect(() => {
-    fetch(`http://localhost:8080/comentarios/${id}`, {
-      method: "GET",
-      headers: { "Content-type": "application/json" },
-    })
-      .then((resp) => {
-        return resp.json();
+    setTimeout(() => {
+      fetch(`http://localhost:8080/comentarios/${id}`, {
+        method: "GET",
+        headers: { "Content-type": "application/json" },
       })
-      .then((data) => {
-        setComentario(data[0]);
-      })
-      .catch((err) => {
-        console.error(err);
-      });
+        .then((resp) => {
+          return resp.json();
+        })
+        .then((data) => {
+          setComentario(data[0]);
+          setRemoveLoading(true);
+        })
+        .catch((err) => {
+          console.error(err);
+        });
+    }, 1200);
   }, []);
 
   return (
@@ -50,6 +56,7 @@ export function PaginaComentario() {
           </div>
         </div>
 
+        {!removeLoading && <Loading />}
         <div className={style.informacoes_duvida}>
           <h2>{comentario.titulo}</h2>
           <p>{comentario.texto}</p>
@@ -57,7 +64,7 @@ export function PaginaComentario() {
           <button className={style.botao_responder}>Responder</button>
         </div>
       </div>
-      <RespostaComentario idComentario={comentario.id} />
+      <RespostasComentarios idComentario={comentario.id} />
     </main>
   );
 }

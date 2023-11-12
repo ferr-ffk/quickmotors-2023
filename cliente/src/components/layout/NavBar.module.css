@@ -91,7 +91,7 @@ a img {
   justify-content: start;
   align-items: start;
 
-  position: absolute;
+  position: fixed;
   top: 0;
   bottom: 0;
   transform: translateX(-100%);
@@ -207,4 +207,14 @@ a img {
 
 a > span {
   margin: 0 1.4rem;
+}
+
+.logout {
+  color: var(--cor-erro);
+  font-weight: 600;
+
+  font-size: 1.5rem;
+
+  margin-left: auto;
+  margin-block: .325rem;
 }

@@ -1,0 +1,27 @@
+.loader_container {
+    height: 100%;
+    width: 100%;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+    margin: auto;
+}
+
+.loader {
+	width: 30%;
+	height: 20%;
+
+    animation: loading 1000ms infinite;
+}
+
+@keyframes loading {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}

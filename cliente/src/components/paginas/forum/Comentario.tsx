@@ -40,13 +40,13 @@ function Comentario({ usuario, titulo, texto, veiculo, data, id }: Props) {
     })
       .then((resp) => resp.json())
       .then((data) => {
-        setUsuario(data), console.log(usuarioObj);
+        setUsuario(data);
       })
       .catch((err) => console.log(err));
   }, []);
 
   return (
-    <article className={styles.comentario}>
+    <article key={id} className={styles.comentario}>
       <a onClick={() => navigate(`/comentarios/${id}/${usuarioObj[0].apelido}`)} href="#">
         <div className={styles.icone_usuario}>
           <img

@@ -27,7 +27,8 @@
   color: #fff;
 }
 
-.duvida {
+.duvida_cadastrado,
+.duvida_nao_cadastrado {
   width: max-content;
   gap: 0.5rem;
 
@@ -39,14 +40,20 @@
   aspect-ratio: 31 / 9;
 }
 
-.duvida:hover,
-.duvida:focus {
+.duvida_cadastrado:hover,
+.duvida_cadastrado:focus {
+  color: white;
+  opacity: .8;
+}
+
+.duvida_nao_cadastrado:hover,
+.duvida_nao_cadastrado:focus {
   background-color: var(--cor-erro);
   color: white;
 }
 
 /* anima o cadeado pra aparecer apenas quando o mouse estiver em cima do link */
-.duvida svg {
+.duvida_nao_cadastrado svg {
   opacity: 0;
   position: absolute;
 }

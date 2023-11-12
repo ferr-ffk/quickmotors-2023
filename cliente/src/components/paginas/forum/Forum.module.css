@@ -9,7 +9,7 @@
 }
 
 /* centraliza o botão de realizar dúvida se for um tablet/celular */
-@media (max-width: 767px) {
+@media (max-width: 1000px) {
   .forum {
     margin-inline: auto;
 

@@ -4,10 +4,10 @@ import Input from "../form/Input";
 import TextLabel from "../form/TextLabel";
 
 import { useState, useEffect } from "react";
-import { useCookies } from "react-cookie";
 import { useNavigate } from "react-router-dom";
 
 import style from "./Login.module.css";
+import SetCookie from "../../hook/SetCookie.tsx";
 
 function LoginMecanico() {
   const [mecanicos, setMecanicos] = useState<Mecanico[]>([]);
@@ -19,7 +19,6 @@ function LoginMecanico() {
     img: "",
   });
 
-  const [, setCookie] = useCookies(["usuario"]);
   const navigate = useNavigate();
 
   // busca os usuários no banco
@@ -52,7 +51,7 @@ function LoginMecanico() {
   };
 
   function salvarLogin() {
-    setCookie("usuario", mecanico.email);
+    SetCookie('usuario', mecanico.email);
   }
 
   const submit = () => {
