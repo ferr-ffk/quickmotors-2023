@@ -36,3 +36,4 @@ O projeto é feito com base na tecnologia `Vite` para sistemas web, utilizando c
 - Gabriel Martins Rocha
 - Giovanni Zorzetto Oliveira
 - Giovanni Foliene Luciano
+
