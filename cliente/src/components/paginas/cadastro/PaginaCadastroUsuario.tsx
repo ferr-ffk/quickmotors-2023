@@ -7,6 +7,7 @@ function Cadastro() {
   const navigate = useNavigate();
 
   const [usuario, setUsuario] = useState<Usuario>({
+    id_usuario:0,
     email: "",
     img: "",
     senha: "",

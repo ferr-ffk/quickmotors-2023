@@ -10,10 +10,11 @@ import * as AiIcons from "react-icons/ai";
 import { useState } from "react";
 
 import { SidebarData } from "./SideBarData.tsx";
-import SelectCidades from "../form/SelectCidades.tsx";
+import SelectCampos from "../form/SelectCampos.tsx";
 import PularNav from "./PularNav.tsx";
 import GetCookieUsuario from "../../hook/GetCookieUsuario.tsx";
 import RemoveCookieUsuario from "../../hook/RemoveCookieUsuario.tsx";
+import { cidades } from "../../modelo/Cidades.ts";
 
 export function NavBar() {
   const [sidebar, setSidebar] = useState(false);
@@ -74,8 +75,6 @@ export function NavBar() {
     );
   };
 
-  console.log(GetCookieUsuario());
-
   return (
     <nav className={style.nav_bar}>
       <PularNav />
@@ -92,10 +91,12 @@ export function NavBar() {
 
         <Pesquisa />
 
-        <SelectCidades onChange={handleSelect} />
+        <SelectCampos
+          onChange={handleSelect}
+          nome="cidades"
+          valores={cidades}
+        />
       </div>
-
-      
 
       {!GetCookieUsuario() && (
         <div className={style.links}>

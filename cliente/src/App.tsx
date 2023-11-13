@@ -10,6 +10,7 @@ import CadastroMecanico from "./components/paginas/cadastro/PaginaCadastroMecani
 import PaginaComentario from "./components/paginas/comentario/PaginaComentario";
 import LoginUsuario from "./components/paginas/LoginUsuario";
 import LoginMecanico from "./components/paginas/LoginMecanico";
+import PaginaPergunta from "./components/paginas/PaginaPergunta";
 
 export function App() {
   return (
@@ -23,6 +24,7 @@ export function App() {
             path="/cadastro"
             element={<Navigate to="/cadastro/usuario" />}
           />
+          <Route path="/perguntar" element={<PaginaPergunta />} />
           <Route path="/cadastro/usuario" element={<CadastroUsuario />} />
           <Route path="/cadastro/mecanico" element={<CadastroMecanico />} />
           <Route path="/comentarios/:id/:usuario" element={<PaginaComentario />} />

@@ -10,13 +10,14 @@ export interface IRespostaComentario {
 }
 
 export default interface IComentario {
-  id: number;
+  id?: number;
   fk_Usuario_id: number;
+  usuario: string;
 
   titulo: string;
   texto: string;
 
-  veiculo: "Carro" | "Moto" | "Outros";
+  veiculo: string;
 
   data: string;
 

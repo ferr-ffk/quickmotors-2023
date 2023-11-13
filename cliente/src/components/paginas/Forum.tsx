@@ -12,6 +12,8 @@ function Forum() {
   const [comentarios, setComentarios] = useState([]);
   const [removeLoading, setRemoveLoading] = useState(false);
 
+  // TODO: falta só a pagina de realizar duvida que o pai ta feito
+
   useEffect(() => {
     setTimeout(() => {
       fetch("http://localhost:8080/comentarios", {
@@ -38,7 +40,7 @@ function Forum() {
       <main id="conteudo-principal" className={style.forum}>
         {comentarios.map((comentario: IComentario) => (
           <Comentario
-            id={comentario.id}
+            id={comentario?.id}
             usuario={comentario.fk_Usuario_id}
             titulo={comentario.titulo}
             texto={comentario.texto}

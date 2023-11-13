@@ -9,6 +9,7 @@ import SetCookie from "../../hook/SetCookie.tsx";
 function LoginUsuario() {
   const [usuarios, setUsuarios] = useState<Usuario[]>([]);
   const [usuario, setUsuario] = useState<Usuario>({
+    id_usuario: 0,
     img: "",
     email: "",
     senha: "",
@@ -47,7 +48,7 @@ function LoginUsuario() {
   };
 
   function salvarLogin() {
-    SetCookie('usuario', usuario.email);
+    SetCookie("usuario", usuario.email);
   }
 
   const submit = () => {
@@ -58,6 +59,7 @@ function LoginUsuario() {
       const senhaIgual = resposta.senha === usuario.senha;
       if (senhaIgual) {
         console.log(usuario);
+
         salvarLogin();
         navigate("/");
       } else {

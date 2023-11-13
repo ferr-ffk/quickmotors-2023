@@ -4,7 +4,7 @@ import Usuario from "../../../modelo/Usuario";
 import { useEffect, useState } from "react";
 
 interface Props {
-  id: number;
+  id?: number;
   usuario: number;
 
   titulo: string;
