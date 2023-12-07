@@ -54,8 +54,6 @@ const PaginaPergunta = () => {
 
   const submit = () => {
     console.log(comentario);
-    // TODO: handleSubmit
-
     // a exclamação diz que mesmo podendo ser nulo, eu asseguro q n será
 
     const dataComentario = `${new Date().getDate()}/${new Date().getMonth()}/${new Date().getFullYear()}`;

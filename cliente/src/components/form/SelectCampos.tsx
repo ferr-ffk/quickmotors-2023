@@ -14,10 +14,10 @@ function SelectCidades({ onChange, valores, nome }: Props) {
       name={nome}
       id={nome}
     >
-      {valores.map((v) => {
+      {valores.map((valor) => {
         return (
-          <option value={v} key={v}>
-            {v}
+          <option value={valor} key={valor}>
+            {valor}
           </option>
         );
       })}
