@@ -31,9 +31,9 @@ O projeto é feito com base na tecnologia `Vite` para sistemas web, utilizando c
 
 ## 🧑‍🤝‍🧑 Grupo
 
-- Davi Gomes de Sousa
-- Fernando Freitas de Lira
+- @davgss
+- @ferr-ffk  
 - Gabriel Martins Rocha
-- Giovanni Zorzetto Oliveira
-- Giovanni Foliene Luciano
+- @gizetto
+- @trifaw
 
