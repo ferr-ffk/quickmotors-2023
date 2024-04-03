@@ -31,9 +31,9 @@ O projeto é feito com base na tecnologia `Vite` para sistemas web, utilizando c
 
 ## 🧑‍🤝‍🧑 Grupo
 
-- @davgss
-- @ferr-ffk  
-- Gabriel Martins Rocha
-- @gizetto
-- @trifaw
+@davgss
+@ferr-ffk  
+@rochakkj
+@gizetto
+@trifaw
 
