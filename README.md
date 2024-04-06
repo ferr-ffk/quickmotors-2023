@@ -31,9 +31,11 @@ O projeto é feito com base na tecnologia `Vite` para sistemas web, utilizando c
 
 ## 🧑‍🤝‍🧑 Grupo
 
-@davgss
-@ferr-ffk  
-@rochakkj
-@gizetto
-@trifaw
+| Integrantes                              |
+|------------------------------------------|
+| [@ferr-ffk](https://github.com/ferr-ffk) |
+| [@davgss](https://github.com/davgss)     |
+| [@rochakkj](https://github.com/rochakkj) |
+| [@gizetto](https://github.com/gizetto)   |
+| [@trifaw](https://github.com/trifaw)     |
 
